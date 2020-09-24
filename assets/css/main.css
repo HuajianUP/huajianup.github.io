@@ -44,6 +44,13 @@ A:hover {background: none; color: #706e6d; text-decoration: none; cursor: pointe
     transform: translate(0%, 20%);
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .video{
     position:relative;
     padding-bottom:56.25%;
@@ -250,7 +257,8 @@ a.sidebar-nav-item:focus {
 .tn-img {
     max-width: 255px;
     max-height: 255px;
-    /*padding-right: 10px;*/
+    width: 100%;
+    /*padding-right: 10px; 255px;*/
 }
 .tn-icon {
     max-width: 58px;
