@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dual-SLAM: A framework for robust single camera navigation</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/home/huajian/homepage/assets/css/main.css">
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178921838-1', 'auto');
+	ga('send', 'pageview');
+}
+</script>
+
+<body class="w3-content" style="max-width:1000px">
+
+	<div class="w3-container w3-card w3-padding-large" >
+		<div style="margin-top:100px">
+			<h1 class="w3-center w3-margin-top" style="font-size: 45px;"  id="Dual-SLAM"><b>Dual-SLAM: A framework for robust single camera navigation</b></h1>
+			<br>
+			<p><div class="w3-center">
+				<em>Huajian Huang</em><sup>1</sup>  
+				<em>Wen-Yan Lin</em><sup>2</sup>  
+				<em>Siying Liu</em><sup>3</sup>  
+				<em>Dong Zhang</em><sup>4</sup>  
+				<em>Sai-Kit Yeung</em><sup>1</sup>  
+			</div></p>
+			
+			<p><div class="w3-center">
+				<sup>1</sup>Hong Kong University of Science and Technology
+				<sup>2</sup>Singapore Management University  <br>
+				<sup>3</sup>Institute for Infocomm Research, Singapore
+				<sup>4</sup>Sun Yat-San University, China
+			</div></p>
+
+			<div  class="w3-center">
+				IEEE International Conference on Intelligent Robots and Systems (IROS), 2020.
+				</div>
+
+			<br>
+			<div class="link w3-center">
+	            <a class="btn btn-primary outline" href="https://arxiv.org/pdf/2009.11219" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
+	            <a class="btn btn-primary outline" href="https://github.com/HuajianUP/Dual_SLAM" target="_blank"><i class="fa fa-github" style="margin-right: 5px"></i>Code</a>
+	        </div>
+	    </div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:80px; margin-left:20px" >
+		    <div class="w3-container w3-padding-small" style="background: linear-gradient(to right,#e8e8e7  0%, #f2f2f2 100%);" id="abstract">
+		    	<h2 id="abstract">Abstract</h2>
+		    </div>
+		    <p style="font-size: 18px;text-align: justify; "> SLAM (Simultaneous Localization And Mapping) seeks to provide a moving agent with real-time self-localization. To achieve real-time speed, SLAM incrementally propagates position estimates. This makes SLAM fast but also makes it vulnerable to local pose estimation failures. As local pose estimation is ill-conditioned, local pose estimation failures happen regularly, making the overall SLAM system brittle. This paper attempts to correct this problem. We note that while local pose estimation is ill-conditioned, pose estimation over longer sequences is well-conditioned. Thus, local pose estimation errors eventually manifest themselves as mapping inconsistencies. When this occurs, we save the current map and activate two new SLAM threads. One processes incoming frames to create a new map and the other, recovery thread, backtracks to link new and old maps together. This creates a Dual-SLAM framework that maintains real-time performance while being robust to local pose estimation failures. Evaluation on benchmark datasets shows Dual-SLAM can reduce failures by a dramatic 88%.<br/>
+		    </p>
+		</div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:20px;margin-bottom:10px" >
+		    <div class="w3-container w3-padding-small" style="background: linear-gradient(to right,#e8e8e7  0%, #f2f2f2 100%);" id="video">
+		    	<h2>Video</h2>
+		    </div>
+		</div>
+
+		<div class="w3-card w3-center" style="width:80%;height:80%;margin-left:90px;">
+			<div class="video" >
+			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+		</div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:70px; text-align: justify; margin-left:20px;margin-bottom:10px" >
+		    <div class="w3-container w3-padding-small" style="background: linear-gradient(to right,#e8e8e7  0%, #f2f2f2 100%);" id="results">
+		    	<h2>Results</h2>
+		    </div>
+
+		    <img style="width:100% ;margin-top: 20px"; src="img/TUMs41_sy.png" ></img>
+		    <p>Figure10: Sequence 41 of TUM-Mono dataset. Reconstructed 3D points are shown in black, key-frames in blue, linkages between adjacent frames in green and  breakage locations in red. Dual-SLAM is stable on this very difficult sequence, allowing it to recover much more of the map than the original ORB-SLAM.</p>
+		    <div class="w3-center">
+			    <div >			  
+				  	<img style="width:20%"; src="img/legend.png" ></img>
+				 	<img style="width:20%"; src="img/Dual_KITTI00_.jpg" ></img>
+				 	<img style="width:20%"; src="img/ORB_KITTI00_.jpg" ></img>
+				 	<img style="width:20%"; src="img/LDSO_KITTI00_.jpg" ></img>
+				</div>
+				<div >			  
+				  	<img style="width:20%"; src="img/legend02.png" ></img>
+				 	<img style="width:20%"; src="img/Dual_KITTI02_.jpg" ></img>
+				 	<img style="width:20%"; src="img/ORB_KITTI02_.jpg" ></img>
+				 	<img style="width:20%"; src="img/LDSO_KITTI02_.jpg" ></img>
+				</div>
+				<div >			  
+				  	<img style="width:20%"; src="img/legend09.png" ></img>
+				 	<img style="width:20%"; src="img/Dual_KITTI09_.jpg" ></img>
+				 	<img style="width:20%"; src="img/ORB_KITTI09_.jpg" ></img>
+				 	<img style="width:20%"; src="img/LDSO_KITTI09_.jpg" ></img>
+				</div>
+			</div>
+			Figure 8: Overlay of SLAM and ground-truth trajectories on KITTI sequences. Ground-truth is in blue. Ideally, the SLAM trajectory would completely cover the ground-truth, making it no longer visible. In cases where the SLAM breaks, large sections of ground-truth become visible. Observe that Dual-SLAM greatly improves ORB-SLAM’s results, making it competitive with LDSO.
+		</div>
+				
+			
+	<div class="w3-container w3-padding-large" style="margin-top:70px; margin-left:20px;">
+		<h3 id="citation">Citation</h3>
+	<pre style="margin:0; background: #e8e8e7"><code><span style="font-weight:bold">@inproceedings</span>{hhuang2020dualslam,
+	title = {{Dual-SLAM}: A framework for robust single camera navigation},
+	author = {Huajian Huang, Wen-Yan Lin, Siying Liu, Dong Zhang, Sai-Kit Yeung},
+    	booktitle = {Intelligent Robots and Systems (IROS), 2020 IEEE international conference on},
+    	year = {2020}
+	}</code></pre> 
+
+		<p style="margin-top:40px"><b style="font-size: 20px;">Acknowledgements</b><br>
+		This research is supported by the Singapore Ministry of Education (MOE) Academic Research Fund (AcRF) Tier 1 grant and internal grant from HKUST(R9429). We also thank Weibin Li and Miaoxin Huang for their generous help.</p>
+	</div>
+	
+
+	</div>
+</body>
+</html>
