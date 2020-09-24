@@ -36,7 +36,7 @@ th, td {
 A:link {background: none; text-decoration: none; cursor: pointer;}
 /*A:visited {background: none; color: #D9661F; text-decoration: none; cursor: pointer;}*/
 A:hover {background: none; color: #706e6d; text-decoration: none; cursor: pointer;border-bottom: 1px dotted black;}
-A:active { background: none; color: #FDB515; background: none; cursor: pointer;}
+/*A:active { background: none; color: #FDB515; background: none; cursor: pointer;}*/
 
 .video{
     position:relative;
