@@ -1,2 +1,2 @@
 # huajianup.github.io
-HUANG Huajian's homepage
+Huajian HUANG's homepage
