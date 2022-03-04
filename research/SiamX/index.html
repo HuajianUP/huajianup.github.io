@@ -32,7 +32,7 @@ if (!doNotTrack) {
 			<h1 class="w3-center w3-margin-top" style="font-size: 45px;"  id="SiamX"><b>SiamX: An Efficient Long-term Tracker Using Cross-level Feature Correlation and Adaptive Tracking Scheme</b></h1>
 			<br>
 			<p><div class="w3-center" style="margin-left: 8px">
-				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang</a></em> 
+				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang</a></em> and 
 				<em><a href="http://www.saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a></em>
 			</div></p>
 			
@@ -40,14 +40,13 @@ if (!doNotTrack) {
 				The Hong Kong University of Science and Technology
 			</div></p>
 
-			<div  class="w3-center">
-				IEEE International Conference on Intelligent Robots and Systems (IROS), 2020.
+			<div  class="w3-center"> IEEE International Conference on Robotics and Automation (ICRA), 2022.
 				</div>
 
 			<br>
 			<div class="link w3-center">
-	            <a class="btn btn-primary outline" href="https://arxiv.org/pdf/2009.11219" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
-	            <a class="btn btn-primary outline" href="https://github.com/HuajianUP/Dual_SLAM" target="_blank"><i class="fa fa-github" style="margin-right: 5px"></i>Code</a>
+	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/SiamX_ICRA2022.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
+	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/result.zip" target="_blank"><i class="fa fa-file-archive-o" style="margin-right: 5px"></i>Results</a>
 	        </div>
 	    </div>
 
@@ -55,8 +54,9 @@ if (!doNotTrack) {
 		    <div class="w3-container w3-padding-small plate" id="abstract">
 		    	<h2 id="abstract">Abstract</h2>
 		    </div>
-		    <p style="font-size: 18px;text-align: justify; "> SLAM (Simultaneous Localization And Mapping) seeks to provide a moving agent with real-time self-localization. To achieve real-time speed, SLAM incrementally propagates position estimates. This makes SLAM fast but also makes it vulnerable to local pose estimation failures. As local pose estimation is ill-conditioned, local pose estimation failures happen regularly, making the overall SLAM system brittle. This paper attempts to correct this problem. We note that while local pose estimation is ill-conditioned, pose estimation over longer sequences is well-conditioned. Thus, local pose estimation errors eventually manifest themselves as mapping inconsistencies. When this occurs, we save the current map and activate two new SLAM threads. One processes incoming frames to create a new map and the other, recovery thread, backtracks to link new and old maps together. This creates a Dual-SLAM framework that maintains real-time performance while being robust to local pose estimation failures. Evaluation on benchmark datasets shows Dual-SLAM can reduce failures by a dramatic 88%.<br/>
+		    <p style="font-size: 18px;text-align: justify; "> Siamese network based trackers have achieved significant progress in visual object tracking. For the sake of speed, they mainly rely on offline training to learn a monolevel feature correlation between a target template and a search region. During the tracking period, they use a fixed strategy to infer target positions over sequences regardless of target states. However, such approaches are vulnerable in case of challenging situations e.g. large variance, presence of distractors, fast motion, or target disappearing and the like. In this paper, we propose a new tracking framework, referred to as SiamX, by exploiting cross-level Siamese features to learn robust correlations between the target template and search regions, and also distinct inference strategies to prevent tracking loss and realize fast target re-localization. Extensive experiments on four benchmarks including VOT-2019, LaSOT, GOT-10k, and TrackingNet show our method significantly enhances the tracker's ability to resist variance and interference, and achieve state-of-the-art results at around 50 FPS. <br/>
 		    </p>
+		    <img style="width:100% ;margin-top: 20px"; src="img/framework.png" ></img>
 		</div>
 
 		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
@@ -76,44 +76,44 @@ if (!doNotTrack) {
 		    	<h2>Results</h2>
 		    </div>
 
-		    <img style="width:100% ;margin-top: 20px"; src="img/TUMs41_sy.png" ></img>
-		    <p>Figure10: Sequence 41 of TUM-Mono dataset. Reconstructed 3D points are shown in black, key-frames in blue, linkages between adjacent frames in green and  breakage locations in red. Dual-SLAM is stable on this very difficult sequence, allowing it to recover much more of the map than the original ORB-SLAM.</p>
-		    <div class="w3-center">
-			    <div >			  
-				  	<img style="width:20%"; src="img/legend.png" ></img>
-				 	<img style="width:20%"; src="img/Dual_KITTI00_.jpg" ></img>
-				 	<img style="width:20%"; src="img/ORB_KITTI00_.jpg" ></img>
-				 	<img style="width:20%"; src="img/LDSO_KITTI00_.jpg" ></img>
-				</div>
-				<div >			  
-				  	<img style="width:20%"; src="img/legend02.png" ></img>
-				 	<img style="width:20%"; src="img/Dual_KITTI02_.jpg" ></img>
-				 	<img style="width:20%"; src="img/ORB_KITTI02_.jpg" ></img>
-				 	<img style="width:20%"; src="img/LDSO_KITTI02_.jpg" ></img>
-				</div>
-				<div >			  
-				  	<img style="width:20%"; src="img/legend09.png" ></img>
-				 	<img style="width:20%"; src="img/Dual_KITTI09_.jpg" ></img>
-				 	<img style="width:20%"; src="img/ORB_KITTI09_.jpg" ></img>
-				 	<img style="width:20%"; src="img/LDSO_KITTI09_.jpg" ></img>
-				</div>
+		    <div  class="w3-center">			  
+				<figure>
+				  <img style="width:56%"; src="img/cattle-2_fix_2.png"></img>
+				  <figcaption>(a) Fixed search scheme</figcaption>
+				  <img style="width:56%"; src="img/cattle-2_global_2.png"></img>
+				  <figcaption>(b) Local-to-global search</figcaption>
+				  <img style="width:56%"; src="img/cattle-2_ours_2.png"></img>
+				  <figcaption>(c) Adaptive tracking scheme</figcaption>
+		    	  <p>Figure 1. Tracking results of using different strategies in out-of-view scenarios. The blue line represents the classification score while the orange line represents the IoU between ground truth and tracking results. On each snapshot, the rectangle denotes target estimates while dashed lines denote search boundaries. Adaptive tracking enables the tracker to return normal quickly. </p>
+				</figure>
+
+
+				<img style="width:50%"; src="img/speed.png"></img>
+		    	<p>Figure 2. A comparison of expected average overlap (EAO) and tracking speed on VOT-2019. </p>
+
+
+				<img style="width:40%"; src="img/Precision-LaSOT.png"></img>
+				<img style="width:40%"; src="img/Success-LaSOT.png"></img>
+		    	<p>Figure 3. Success and precision plots on LaSOT. </p>
+
+		    	<img style="width:86%"; src="img/got.png"></img>
+				<img style="width:86%"; src="img/tracking.png"></img>
 			</div>
-			Figure 8: Overlay of SLAM and ground-truth trajectories on KITTI sequences. Ground-truth is in blue. Ideally, the SLAM trajectory would completely cover the ground-truth, making it no longer visible. In cases where the SLAM breaks, large sections of ground-truth become visible. Observe that Dual-SLAM greatly improves ORB-SLAM’s results, making it competitive with LDSO.
 		</div>
 				
 			
 	<div class="w3-container w3-padding-large" style="margin-top:4%; margin-left:2%;">
 		<h3 id="citation">Citation</h3>
 	<pre style="margin:0; background: #e8e8e7"><code><span>@inproceedings</span>{hhuang2020dualslam,
-	title = {Dual-SLAM: A framework for robust single camera navigation},
+	title = {SiamX: An Efficient Long-term Tracker Using Cross-level Feature Correlation and Adaptive Tracking Scheme},
 	author = {Huang, Huajian and Yeung, Sai-Kit},
-    	booktitle = {2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-    	pages={4942--4949},
-    	year = {2020},
+    	booktitle = {International Conference on Robotics and Automation (ICRA)},
+    	year = {2022},
     	organization={IEEE}
 	}</code></pre> 
+
 		<p style="margin-top:40px"><b style="font-size: 20px;">Acknowledgements</b><br>
-		This research is supported by the Singapore Ministry of Education (MOE) Academic Research Fund (AcRF) Tier 1 grant and internal grant from HKUST(R9429). We also thank Weibin Li and Miaoxin Huang for their generous help.</p>
+		This research project is partially supported by an internal grant from HKUST (R9429).</p>
 	</div>
 	
 

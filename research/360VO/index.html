@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SiamX: An Efficient Long-term Tracker Using Cross-level Feature Correlation and Adaptive Tracking Scheme</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://huajianup.github.io/assets/css/main.css">
+
+<!--<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">-->
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178921838-1', 'auto');
+	ga('send', 'pageview');
+}
+</script>
+
+<body class="w3-content" style="max-width:1000px">
+
+	<div class="w3-container w3-card w3-padding-large" >
+		<div style="margin-top:9%">
+			<h1 class="w3-center w3-margin-top" style="font-size: 45px;"  id="SiamX"><b>SiamX: An Efficient Long-term Tracker Using Cross-level Feature Correlation and Adaptive Tracking Scheme</b></h1>
+			<br>
+			<p><div class="w3-center" style="margin-left: 8px">
+				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang</a></em> and 
+				<em><a href="http://www.saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a></em>
+			</div></p>
+			
+			<p><div class="w3-center" style="margin-left: 4px">
+				The Hong Kong University of Science and Technology
+			</div></p>
+
+			<div  class="w3-center"> IEEE International Conference on Robotics and Automation (ICRA), 2022.
+				</div>
+
+			<br>
+			<div class="link w3-center">
+	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/SiamX_ICRA2022.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
+	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/result.zip" target="_blank"><i class="fa fa-file-archive-o" style="margin-right: 5px"></i>Results</a>
+	        </div>
+	    </div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:8%; margin-left:2%" >
+		    <div class="w3-container w3-padding-small plate" id="abstract">
+		    	<h2 id="abstract">Abstract</h2>
+		    </div>
+		    <p style="font-size: 18px;text-align: justify; "> Siamese network based trackers have achieved significant progress in visual object tracking. For the sake of speed, they mainly rely on offline training to learn a monolevel feature correlation between a target template and a search region. During the tracking period, they use a fixed strategy to infer target positions over sequences regardless of target states. However, such approaches are vulnerable in case of challenging situations e.g. large variance, presence of distractors, fast motion, or target disappearing and the like. In this paper, we propose a new tracking framework, referred to as SiamX, by exploiting cross-level Siamese features to learn robust correlations between the target template and search regions, and also distinct inference strategies to prevent tracking loss and realize fast target re-localization. Extensive experiments on four benchmarks including VOT-2019, LaSOT, GOT-10k, and TrackingNet show our method significantly enhances the tracker's ability to resist variance and interference, and achieve state-of-the-art results at around 50 FPS. <br/>
+		    </p>
+		    <img style="width:100% ;margin-top: 20px"; src="img/framework.png" ></img>
+		</div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
+		    <div class="w3-container w3-padding-small plate" id="video">
+		    	<h2>Video</h2>
+		    </div>
+		</div>
+
+		<div class="w3-card w3-center" style="width:80%;height:80%;margin-left:10%; ">
+			<div class="video" >
+			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+		</div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:70px; text-align: justify; margin-left:2%;margin-bottom:10px" >
+		    <div class="w3-container w3-padding-small plate" id="results">
+		    	<h2>Results</h2>
+		    </div>
+
+		    <div  class="w3-center">			  
+				<figure>
+				  <img style="width:56%"; src="img/cattle-2_fix_2.png"></img>
+				  <figcaption>(a) Fixed search scheme</figcaption>
+				  <img style="width:56%"; src="img/cattle-2_global_2.png"></img>
+				  <figcaption>(b) Local-to-global search</figcaption>
+				  <img style="width:56%"; src="img/cattle-2_ours_2.png"></img>
+				  <figcaption>(c) Adaptive tracking scheme</figcaption>
+		    	  <p>Figure 1. Tracking results of using different strategies in out-of-view scenarios. The blue line represents the classification score while the orange line represents the IoU between ground truth and tracking results. On each snapshot, the rectangle denotes target estimates while dashed lines denote search boundaries. Adaptive tracking enables the tracker to return normal quickly. </p>
+				</figure>
+
+
+				<img style="width:50%"; src="img/speed.png"></img>
+		    	<p>Figure 2. A comparison of expected average overlap (EAO) and tracking speed on VOT-2019. </p>
+
+
+				<img style="width:40%"; src="img/Precision-LaSOT.png"></img>
+				<img style="width:40%"; src="img/Success-LaSOT.png"></img>
+		    	<p>Figure 3. Success and precision plots on LaSOT. </p>
+
+		    	<img style="width:86%"; src="img/got.png"></img>
+				<img style="width:86%"; src="img/tracking.png"></img>
+			</div>
+		</div>
+				
+			
+	<div class="w3-container w3-padding-large" style="margin-top:4%; margin-left:2%;">
+		<h3 id="citation">Citation</h3>
+	<pre style="margin:0; background: #e8e8e7"><code><span>@inproceedings</span>{hhuang2020dualslam,
+	title = {SiamX: An Efficient Long-term Tracker Using Cross-level Feature Correlation and Adaptive Tracking Scheme},
+	author = {Huang, Huajian and Yeung, Sai-Kit},
+    	booktitle = {International Conference on Robotics and Automation (ICRA)},
+    	year = {2022},
+    	organization={IEEE}
+	}</code></pre> 
+
+		<p style="margin-top:40px"><b style="font-size: 20px;">Acknowledgements</b><br>
+		This research project is partially supported by an internal grant from HKUST (R9429).</p>
+	</div>
+	
+
+	</div>
+</body>
+</html>
