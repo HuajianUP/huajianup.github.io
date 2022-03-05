@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>360Roam: Real-Time Indoor Roaming Using Geometry-Aware 360&#7506 Radiance Fields</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://huajianup.github.io/assets/css/main.css">
+
+<!--<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">-->
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178921838-1', 'auto');
+	ga('send', 'pageview');
+}
+</script>
+
+<body class="w3-content" style="max-width:1000px">
+
+	<div class="w3-container w3-card w3-padding-large" >
+		<div style="margin-top:9%">
+			<h1 class="w3-center w3-margin-top" style="font-size: 45px;"  id="360Roam"><b>360Roam: Real-Time Indoor Roaming Using Geometry-Aware 360&#7506 Radiance Fields</b></h1>
+			<br>
+			<p><div class="w3-center" style="margin-left: 8px">
+				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang</a></em>, Yingshu Chen, Tianjia Zhang and 
+				<em><a href="http://www.saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a></em>
+			</div></p>
+			
+			<p><div class="w3-center" style="margin-left: 4px">
+				The Hong Kong University of Science and Technology
+			</div></p>
+
+			<div  class="w3-center"> 2022.
+				</div>
+
+			<br>
+			<div class="link w3-center">
+	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Roam/360Roam.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
+	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Roam/" target="_blank"><i class="fa fa-file-archive-o" style="margin-right: 5px"></i>Dataset</a>
+	        </div>
+	    </div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:4%; margin-left:2%" >
+		    <div class="w3-container w3-padding-small plate" id="abstract">
+		    	<h2 id="abstract">Abstract</h2>
+		    </div>
+		    <p style="font-size: 18px;text-align: justify; "> Neural radiance field (NeRF) has recently achieved impressive results in novel view synthesis. However, previous works on NeRF mainly focus on object-centric scenes. In this work, we propose 360Roam, a novel scene-level NeRF system that can synthesize images of large-scale indoor scenes in real-time. Our system first builds an omnidirectional neural radiance field (360NeRF) from multiple input 360&#7506 images. Using 360NeRF we then progressively estimate a 3D probabilistic occupancy volume which represents the scene geometry in form of spacial density. Skipping empty spaces and upsampling occupied volumes essentially allows us to accelerate volume rendering by using 360NeRF in a geometry-aware fashion. Furthermore, we use an adaptive divide-and-conquer strategy to slim and fine tune the radiance fields for further improvement. The floorplan of the scene extracted from the occupancy map can provide guidance of ray sampling and facilitate a realistic roaming experience. To show the efficacy of our system, we demonstrate our real-time indoor roaming results in a large variety of scenes. <br/>
+		    </p>
+		    <img style="width:100% ;margin-top: auto;"; src="img/teaser_v05.png" ></img>
+		</div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
+		    <div class="w3-container w3-padding-small plate" id="video">
+		    	<h2>Video</h2>
+		    </div>
+		    <!--div class="video" >
+			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
+			</div-->
+		</div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
+		    <div class="w3-container w3-padding-small plate" id="dataset">
+		    	<h2>Dataset</h2>
+		    </div>
+		    <div class="w3-row, w3-center">
+			    <div class="w3-col" style="width:19.2%">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/bar2.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/base2.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/cafe1.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/canteen.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/center2.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%;">Bar</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Base</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Cafe</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Canteen</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Center</div>
+			</div>
+
+		    <div class="w3-row, w3-center">
+			    <div class="w3-col" style="width:19.2%">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/corridor.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/inno1.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/lab1.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/library.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/office1.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%;">Corridor</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Inno</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Lab</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Library</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Office</div>
+			</div>
+
+		    <div class="w3-row, w3-center">
+			    <div class="w3-col" style="width:19.2%">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/replica_apartment_0_floor1.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/replica_apartment_0_floor2.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/replica_apartment_1.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/replica_apartment_2.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360Roam/"> <img src="img/dataset/replica_frl_apartment_0.jpg" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%;">Replica_1</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Replica_2</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Replica_3</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Replica_4</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Replica_5</div>
+			</div>
+		</div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:30px; text-align: justify; margin-left:2%;margin-bottom:10px" >
+		    <div class="w3-container w3-padding-small plate" id="results">
+		    	<h2>Results</h2>
+		    </div>
+
+			<!--div class="video" >
+			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
+			</div-->
+		</div>
+				
+			
+	<!--div class="w3-container w3-padding-large" style="margin-top:10px; margin-left:2%;">
+		<h3 id="citation">Citation</h3>
+		<pre style="margin:0; background: #e8e8e7"><code><span>@inproceedings</span>{hhuang2022roam,
+		title = {360Roam: Real-Time Indoor Roaming Using Geometry-Aware 360ᵒ Radiance Fields},
+		author = {Huang, Huajian and Chen, Yingshu and Zhang, Tianjia and Yeung, Sai-Kit},
+	    	booktitle = {},
+	    	year = {2022},
+	    	organization={TOG}
+		}</code></pre> 
+
+		<p style="margin-top:10px"><b style="font-size: 20px;">Acknowledgements</b><br>
+		This research project is partially supported by an internal grant from HKUST (R9429) and the Innovation and Technology Support Programme of the Innovation and Technology Fund (Ref: ITS/200/20FP).</p>
+	</div-->
+	
+
+	</div>
+</body>
+</html>

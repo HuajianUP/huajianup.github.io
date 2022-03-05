@@ -2,7 +2,7 @@
 <html><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SiamX: An Efficient Long-term Tracker Using Cross-level Feature Correlation and Adaptive Tracking Scheme</title>
+<title>360VO: Visual Odometry Using A Single 360 Camera</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -29,7 +29,7 @@ if (!doNotTrack) {
 
 	<div class="w3-container w3-card w3-padding-large" >
 		<div style="margin-top:9%">
-			<h1 class="w3-center w3-margin-top" style="font-size: 45px;"  id="SiamX"><b>SiamX: An Efficient Long-term Tracker Using Cross-level Feature Correlation and Adaptive Tracking Scheme</b></h1>
+			<h1 class="w3-center w3-margin-top" style="font-size: 45px;"  id="360VO"><b>360VO: Visual Odometry Using A Single 360 Camera</b></h1>
 			<br>
 			<p><div class="w3-center" style="margin-left: 8px">
 				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang</a></em> and 
@@ -45,75 +45,58 @@ if (!doNotTrack) {
 
 			<br>
 			<div class="link w3-center">
-	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/SiamX_ICRA2022.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
-	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/result.zip" target="_blank"><i class="fa fa-file-archive-o" style="margin-right: 5px"></i>Results</a>
+	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360VO/360VO_ICRA2022.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
+	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360VO/" target="_blank"><i class="fa fa-file-archive-o" style="margin-right: 5px"></i>Supplementary</a>
 	        </div>
 	    </div>
 
-		<div class="w3-container w3-padding-large" style="margin-top:8%; margin-left:2%" >
+		<div class="w3-container w3-padding-large" style="margin-top:4%; margin-left:2%" >
 		    <div class="w3-container w3-padding-small plate" id="abstract">
 		    	<h2 id="abstract">Abstract</h2>
 		    </div>
-		    <p style="font-size: 18px;text-align: justify; "> Siamese network based trackers have achieved significant progress in visual object tracking. For the sake of speed, they mainly rely on offline training to learn a monolevel feature correlation between a target template and a search region. During the tracking period, they use a fixed strategy to infer target positions over sequences regardless of target states. However, such approaches are vulnerable in case of challenging situations e.g. large variance, presence of distractors, fast motion, or target disappearing and the like. In this paper, we propose a new tracking framework, referred to as SiamX, by exploiting cross-level Siamese features to learn robust correlations between the target template and search regions, and also distinct inference strategies to prevent tracking loss and realize fast target re-localization. Extensive experiments on four benchmarks including VOT-2019, LaSOT, GOT-10k, and TrackingNet show our method significantly enhances the tracker's ability to resist variance and interference, and achieve state-of-the-art results at around 50 FPS. <br/>
+		    <p style="font-size: 18px;text-align: justify; "> In this paper, we propose a novel direct visual odometry algorithm to take the advantage of a 360-degree camera for robust localization and mapping. Our system extends direct sparse odometry by using a spherical camera model to process equirectangular images without rectification to attain omnidirectional perception. After adapting mapping and optimization algorithms to the new model, camera parameters, including intrinsic and extrinsic parameters, and 3D mapping can be jointly optimized within the local sliding window. In addition, we evaluate the proposed algorithm using both real world and large-scale simulated scenes for qualitative and quantitative validations. The extensive experiments indicate that our system achieves start of the art results. <br/>
 		    </p>
-		    <img style="width:100% ;margin-top: 20px"; src="img/framework.png" ></img>
+		    <img style="width:100% ;margin-top: auto;"; src="img/overview.png" ></img>
 		</div>
 
 		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
 		    <div class="w3-container w3-padding-small plate" id="video">
 		    	<h2>Video</h2>
 		    </div>
-		</div>
-
-		<div class="w3-card w3-center" style="width:80%;height:80%;margin-left:10%; ">
-			<div class="video" >
+		    <div class="video" >
 			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
 			</div>
 		</div>
 
-		<div class="w3-container w3-padding-large" style="margin-top:70px; text-align: justify; margin-left:2%;margin-bottom:10px" >
+
+		<div class="w3-container w3-padding-large" style="margin-top:30px; text-align: justify; margin-left:2%;margin-bottom:10px" >
 		    <div class="w3-container w3-padding-small plate" id="results">
 		    	<h2>Results</h2>
 		    </div>
 
 		    <div  class="w3-center">			  
-				<figure>
-				  <img style="width:56%"; src="img/cattle-2_fix_2.png"></img>
-				  <figcaption>(a) Fixed search scheme</figcaption>
-				  <img style="width:56%"; src="img/cattle-2_global_2.png"></img>
-				  <figcaption>(b) Local-to-global search</figcaption>
-				  <img style="width:56%"; src="img/cattle-2_ours_2.png"></img>
-				  <figcaption>(c) Adaptive tracking scheme</figcaption>
-		    	  <p>Figure 1. Tracking results of using different strategies in out-of-view scenarios. The blue line represents the classification score while the orange line represents the IoU between ground truth and tracking results. On each snapshot, the rectangle denotes target estimates while dashed lines denote search boundaries. Adaptive tracking enables the tracker to return normal quickly. </p>
-				</figure>
+				<img style="width:100%; margin-top: 20px"; src="img/our43_2.png"></img>
+		    	<p>Figure 1. Constraints between activated keyframes in the local optimization window are represented by <span style="color:blue;">blue</span> lines, while <span style="color:magenta;">magenta</span> curve denotes camera trajectory. The gray sphere denotes the current frame's position, while black points denote the 3D map. Since the same landmarks can be observed for a longer period, it has great consistency and low drift. </p>
+			</div>
 
-
-				<img style="width:50%"; src="img/speed.png"></img>
-		    	<p>Figure 2. A comparison of expected average overlap (EAO) and tracking speed on VOT-2019. </p>
-
-
-				<img style="width:40%"; src="img/Precision-LaSOT.png"></img>
-				<img style="width:40%"; src="img/Success-LaSOT.png"></img>
-		    	<p>Figure 3. Success and precision plots on LaSOT. </p>
-
-		    	<img style="width:86%"; src="img/got.png"></img>
-				<img style="width:86%"; src="img/tracking.png"></img>
+			<div class="video" >
+			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
 			</div>
 		</div>
 				
 			
-	<div class="w3-container w3-padding-large" style="margin-top:4%; margin-left:2%;">
+	<div class="w3-container w3-padding-large" style="margin-top:10px; margin-left:2%;">
 		<h3 id="citation">Citation</h3>
-	<pre style="margin:0; background: #e8e8e7"><code><span>@inproceedings</span>{hhuang2020dualslam,
-	title = {SiamX: An Efficient Long-term Tracker Using Cross-level Feature Correlation and Adaptive Tracking Scheme},
-	author = {Huang, Huajian and Yeung, Sai-Kit},
-    	booktitle = {International Conference on Robotics and Automation (ICRA)},
-    	year = {2022},
-    	organization={IEEE}
-	}</code></pre> 
+		<pre style="margin:0; background: #e8e8e7"><code><span>@inproceedings</span>{hhuang2022VO,
+		title = {360VO: Visual Odometry Using A Single 360 Camera},
+		author = {Huang, Huajian and Yeung, Sai-Kit},
+	    	booktitle = {International Conference on Robotics and Automation (ICRA)},
+	    	year = {2022},
+	    	organization={IEEE}
+		}</code></pre> 
 
-		<p style="margin-top:40px"><b style="font-size: 20px;">Acknowledgements</b><br>
-		This research project is partially supported by an internal grant from HKUST (R9429).</p>
+		<p style="margin-top:10px"><b style="font-size: 20px;">Acknowledgements</b><br>
+		This research project is partially supported by an internal grant from HKUST (R9429) and the Innovation and Technology Support Programme of the Innovation and Technology Fund (Ref: ITS/200/20FP).</p>
 	</div>
 	
 

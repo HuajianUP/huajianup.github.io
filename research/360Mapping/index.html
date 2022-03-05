@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>360ST-Mapping: An Online Semantics-Guided Topological Mapping Module for Omnidirectional Visual SLAM</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://huajianup.github.io/assets/css/main.css">
+
+<!--<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">-->
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-178921838-1', 'auto');
+	ga('send', 'pageview');
+}
+</script>
+
+<body class="w3-content" style="max-width:1000px">
+
+	<div class="w3-container w3-card w3-padding-large" >
+		<div style="margin-top:9%">
+			<h1 class="w3-center w3-margin-top" style="font-size: 45px;"  id="360Mapping"><b>360ST-Mapping: An Online Semantics-Guided Topological Mapping Module for Omnidirectional Visual SLAM</b></h1>
+			<br>
+			<p><div class="w3-center" style="margin-left: 8px">
+				<em>Hongji Liu</em><sup>1</sup>,
+				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang</a></em><sup>2</sup>,   
+				<em><a href="http://www.saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a></em><sup>2</sup> and 
+				<em>Ming Liu</em><sup>1,2</sup>   
+			</div></p>
+			
+			<p><div class="w3-center" style="margin-left: 4px">
+				<sup>1</sup> The Hong Kong University of Science and Technology (Guangzhou) <br>
+				<sup>2</sup> The Hong Kong University of Science and Technology
+			</div></p>
+
+			<div  class="w3-center"> 2022.
+				</div>
+
+			<br>
+			<div class="link w3-center">
+	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Mapping/360Mapping.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
+	            <!--a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Mapping/" target="_blank"><i class="fa fa-file-archive-o" style="margin-right: 5px"></i>Supplementary</a-->
+	        </div>
+	    </div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:4%; margin-left:2%" >
+		    <div class="w3-container w3-padding-small plate" id="abstract">
+		    	<h2 id="abstract">Abstract</h2>
+		    </div>
+		    <p style="font-size: 18px;text-align: justify; "> Topological map as an abstract representation of the observed environment has the advantage in path planning and navigation. Here we proposed an online topological mapping method, 360ST-Mapping, by making use of omnidirectional vision. The 360 ◦ field of view allows the agent to obtain consistent observation and incrementally extract topological environment information. Moreover, we leverage semantic information to guide topological places recognition further improving performance. The topological map possessing semantic information has the potential to support semantics-related advanced tasks. After combining the topological mapping module with the omnidirectional visual SLAM, we conduct extensive experiments in several large-scale indoor scenes to validate the effectiveness. <br/>
+		    </p>
+		    <img style="width:100% ;margin-top: auto;"; src="img/overview.png" ></img>
+		</div>
+
+		<!--div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
+		    <div class="w3-container w3-padding-small plate" id="video">
+		    	<h2>Video</h2>
+		    </div>
+		    <div class="video" >
+			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+		</div-->
+
+
+		<div class="w3-container w3-padding-large" style="margin-top:30px; text-align: justify; margin-left:2%;margin-bottom:10px" >
+		    <div class="w3-container w3-padding-small plate" id="results">
+		    	<h2>Results</h2>
+		    </div>
+
+		    <div  class="w3-center">			  
+				<img style="width:100%; margin-top: 20px"; src="img/teaser.png"></img>
+		    	<p>Figure 1. The mapping results on the academic building. Our proposed method 360ST-Mapping is integrated into an omnidirectional visual SLAM. It can identify individual places (denoted as distinct colors) and generate topological map online.</p>
+
+				<img style="width:48%"; src="img/lab_landmark.png"></img>
+		    	<img style="width:48%"; src="img/lab.png"></img>
+		    	<p>Figure 2. The results on the laboratory scene. The left is the landmark map and the right is the the topological map with parts of scene reference keyframes.</p>
+
+
+			</div>
+		</div>
+				
+			
+	<!--div class="w3-container w3-padding-large" style="margin-top:10px; margin-left:2%;">
+		<h3 id="citation">Citation</h3>
+		<pre style="margin:0; background: #e8e8e7"><code><span>@inproceedings</span>{liu2022mapping,
+		title = {360ST-Mapping: An Online Semantics-Guided Topological Mapping Module for Omnidirectional Visual SLAM},
+		author = {Liu, Hongji and Huang, Huajian and Yeung, Sai-Kit and Liu, Ming},
+	    	booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+	    	year = {2022},
+	    	organization={IEEE}
+		}</code></pre> 
+
+		<p style="margin-top:10px"><b style="font-size: 20px;">Acknowledgements</b><br>
+		This research project is partially supported by an internal grant from HKUST (R9429) and the Innovation and Technology Support Programme of the Innovation and Technology Fund (Ref: ITS/200/20FP).</p>
+	</div-->
+	
+
+	</div>
+</body>
+</html>
