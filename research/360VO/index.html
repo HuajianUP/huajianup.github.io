@@ -64,7 +64,58 @@ if (!doNotTrack) {
 		    	<h2>Video</h2>
 		    </div>
 		    <div class="video" >
-			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
+			  <iframe src="https://www.youtube.com/embed/6FZXevqsEzs" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+		</div>
+
+		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
+		    <div class="w3-container w3-padding-small plate" id="dataset">
+		    	<h2>Dataset</h2>
+		    </div>
+		    <div class="w3-row, w3-center">
+			    <div class="w3-col" style="width:19.2%">
+			    	<a href="https://huajianup.github.io/research/360VO/"> <img src="img/seq0.png" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360VO/"> <img src="img/seq1.png" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360VO/"> <img src="img/seq2.png" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360VO/"> <img src="img/seq3.png" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360VO/"> <img src="img/seq4.png" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%;">Seq0</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq1</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq2</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq3</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq4</div>
+			</div>
+
+		    <div class="w3-row, w3-center">
+			    <div class="w3-col" style="width:19.2%">
+			    	<a href="https://huajianup.github.io/research/360VO/"> <img src="img/seq5.png" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360VO/"> <img src="img/seq6.png" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360VO/"> <img src="img/seq7.png" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360VO/"> <img src="img/seq8.png" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
+			    	<a href="https://huajianup.github.io/research/360VO/"> <img src="img/seq9.png" style="width:100%"> </a>
+			    </div>
+			    <div class="w3-col" style="width:19.2%;">Seq5</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq6</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq7</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq8</div>
+			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq9</div>
 			</div>
 		</div>
 
@@ -74,13 +125,39 @@ if (!doNotTrack) {
 		    	<h2>Results</h2>
 		    </div>
 
-		    <div  class="w3-center">			  
-				<img style="width:100%; margin-top: 20px"; src="img/our43_2.png"></img>
-		    	<p>Figure 1. Constraints between activated keyframes in the local optimization window are represented by <span style="color:blue;">blue</span> lines, while <span style="color:magenta;">magenta</span> curve denotes camera trajectory. The gray sphere denotes the current frame's position, while black points denote the 3D map. Since the same landmarks can be observed for a longer period, it has great consistency and low drift. </p>
+ 			<div class="w3-row, w3-center" style="margin-top:1%">
+ 				<div class="w3-col" style="width:49.2%">
+			    	<img src="img/rmse_mean.jpg" style="width:100%"> 
+			    </div>
+			    <div class="w3-col" style="width:49.2%; margin-left:1%;">
+			    	<img src="img/rmse2_mean.jpg" style="width:100%">
+			    </div>
 			</div>
+			<p>Figure 1. Results on the synthesis dataset. Each sequence is run 10 times, and RMSE(m) of the trajectory is reported. The number at the top of each bar is the mean of RMSE. Ours 360VO achieves comparable results in contrast to OpenVSLAM. In addition, we rectify and crop the 360 images to perspective images of 90o FOV, and take them as input to run ORB-SLAM and DSO. It is obvious that the methods utilizing 360 camera are commonly more robust and precise. </p>
+			<div class="w3-row, w3-center" style="margin-top:1%">
+		    	<div class="w3-col" style="width:100%">
+			    	<img src="img/our43_2.png" style="width:100%"> 
+			    </div>
+			</div>
+			<p>Figure 2. Constraints between activated keyframes in the local optimization window are represented by <span style="color:blue;">blue</span> lines, while <span style="color:magenta;">magenta</span> curve denotes camera trajectory. The gray sphere denotes the current frame's position, while black points denote the 3D map. Since the same landmarks can be observed for a longer period, it has great consistency and low drift. </p>
 
-			<div class="video" >
-			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
+			<div class="video" style="margin-top: 2%" >
+			  <iframe src="https://www.youtube.com/embed/PIA-8GnpkOY" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<div class="video" style="margin-top: 1%" >
+			  <iframe src="https://www.youtube.com/embed/9hbakQUFuno" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<div class="video" style="margin-top: 1%" >
+			  <iframe src="https://www.youtube.com/embed/HHiQuPP5rXg" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<div class="video" style="margin-top: 1%" >
+			  <iframe src="https://www.youtube.com/embed/rUTvhaH9wTk" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<div class="video" style="margin-top: 1%" >
+			  <iframe src="https://www.youtube.com/embed/SSr3pAKEFJM" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<div class="video" style="margin-top: 1%" >
+			  <iframe src="https://www.youtube.com/embed/NZjDQFaaqzs" allowfullscreen title="YouTube Video"></iframe>
 			</div>
 		</div>
 				
