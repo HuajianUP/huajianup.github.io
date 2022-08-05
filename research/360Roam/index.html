@@ -45,8 +45,8 @@ if (!doNotTrack) {
 
 			<br>
 			<div class="link w3-center">
-	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Roam/360Roam.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
-	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Roam/" target="_blank"><i class="fa fa-file-archive-o" style="margin-right: 5px"></i>Dataset</a>
+	            <a class="btn btn-primary outline" href="https://arxiv.org/abs/2208.02705" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
+	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Roam/" target="_blank"><i class="fa fa-file-archive-o" style="margin-right: 5px"></i>Dataset(coming)</a>
 	        </div>
 	    </div>
 
@@ -54,23 +54,57 @@ if (!doNotTrack) {
 		    <div class="w3-container w3-padding-small plate" id="abstract">
 		    	<h2 id="abstract">Abstract</h2>
 		    </div>
-		    <p style="font-size: 18px;text-align: justify; "> Neural radiance field (NeRF) has recently achieved impressive results in novel view synthesis. However, previous works on NeRF mainly focus on object-centric scenes. In this work, we propose 360Roam, a novel scene-level NeRF system that can synthesize images of large-scale indoor scenes in real-time. Our system first builds an omnidirectional neural radiance field (360NeRF) from multiple input 360&#7506 images. Using 360NeRF we then progressively estimate a 3D probabilistic occupancy volume which represents the scene geometry in form of spacial density. Skipping empty spaces and upsampling occupied volumes essentially allows us to accelerate volume rendering by using 360NeRF in a geometry-aware fashion. Furthermore, we use an adaptive divide-and-conquer strategy to slim and fine tune the radiance fields for further improvement. The floorplan of the scene extracted from the occupancy map can provide guidance of ray sampling and facilitate a realistic roaming experience. To show the efficacy of our system, we demonstrate our real-time indoor roaming results in a large variety of scenes. <br/>
+		    <p style="font-size: 18px;text-align: justify; "> Neural radiance field (NeRF) has recently achieved impressive results in novel view synthesis. However, previous works on NeRF mainly focus on object-centric scenarios. In this work, we propose 360Roam, a novel scene-level NeRF system that can synthesize images of large-scale indoor scenes in real time and support VR roaming. Our system first builds an omnidirectional neural radiance field 360NeRF from multiple input 360&#7506 images. Using 360NeRF, we then progressively estimate a 3D probabilistic occupancy map which represents the scene geometry in the form of spacial density. Skipping empty spaces and upsampling occupied voxels essentially allows us to accelerate volume rendering by using 360NeRF in a geometry-aware fashion. Furthermore, we use an adaptive divide-and-conquer strategy to slim and fine-tune the radiance fields for further improvement. The floorplan of the scene extracted from the occupancy map can provide guidance for ray sampling and facilitate a realistic roaming experience. To show the efficacy of our system, we collect a 360&#7506 image dataset in a large variety of scenes and conduct extensive experiments. Quantitative and qualitative comparisons among baselines illustrated our predominant performance in novel view synthesis for complex indoor scenes. <br/>
 		    </p>
-		    <img style="width:100% ;margin-top: auto;"; src="img/teaser_v05.png" ></img>
+		    <img style="width:100% ;margin-top: auto;"; src="img/teaser.jpg" ></img>
 		</div>
 
-		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
+		<!--div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
 		    <div class="w3-container w3-padding-small plate" id="video">
 		    	<h2>Video</h2>
 		    </div>
-		    <!--div class="video" >
+		    <div class="video" >
 			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
-			</div-->
+			</div>
+		</div-->
+
+		<div class="w3-container w3-padding-large" style="margin-top:30px; text-align: justify; margin-left:2%;margin-bottom:10px" >
+		    <div class="w3-container w3-padding-small plate" id="results">
+		    	<h2>Results</h2>
+		    </div>
+		    <br/>
+		    <div class="video" >
+			  <iframe src="https://www.youtube.com/embed/jzjKjyIh5qg" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<br/>
+			<div class="video" >
+			  <iframe src="https://www.youtube.com/embed/c3QmY1a7J0k" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<br/>
+			<div class="video" >
+			  <iframe src="https://www.youtube.com/embed/pBYnfTtkdUw" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<br/>
+			<div class="video" >
+			  <iframe src="https://www.youtube.com/embed/F5P_O4vGRDg" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<br/>
+			<div class="video" >
+			  <iframe src="https://www.youtube.com/embed/8ZXEx2lTKfo" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<br/>
+			<div class="video" >
+			  <iframe src="https://www.youtube.com/embed/MHKAUGwH0e8" allowfullscreen title="YouTube Video"></iframe>
+			</div>
+			<br/>
+			<div class="video" >
+			  <iframe src="https://www.youtube.com/embed/zda_ubXsFpk" allowfullscreen title="YouTube Video"></iframe>
+			</div>
 		</div>
 
 		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
 		    <div class="w3-container w3-padding-small plate" id="dataset">
-		    	<h2>Dataset</h2>
+		    	<h2>Dataset(available soon)</h2>
 		    </div>
 		    <div class="w3-row, w3-center">
 			    <div class="w3-col" style="width:19.2%">
@@ -142,15 +176,7 @@ if (!doNotTrack) {
 			</div>
 		</div>
 
-		<div class="w3-container w3-padding-large" style="margin-top:30px; text-align: justify; margin-left:2%;margin-bottom:10px" >
-		    <div class="w3-container w3-padding-small plate" id="results">
-		    	<h2>Results</h2>
-		    </div>
 
-			<!--div class="video" >
-			  <iframe src="https://www.youtube.com/embed/8VaNGm8AN9c" allowfullscreen title="YouTube Video"></iframe>
-			</div-->
-		</div>
 				
 			
 	<!--div class="w3-container w3-padding-large" style="margin-top:10px; margin-left:2%;">
