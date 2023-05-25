@@ -311,6 +311,7 @@ a.sidebar-nav-item:focus {
 
 .link {
     padding-top: 0.5em;
+    line-height: 1.7;
 }
 
 .journal {
