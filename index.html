@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <title>Huajian homepage</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@ if (!doNotTrack) {
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container">
+  <div class="w3-container center">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove w3-large"></i>
     </a>
@@ -36,32 +36,32 @@ if (!doNotTrack) {
     <h4><b>Huajian Huang</b></h4>
     <!--<p class="w3-text-grey">Template by W3.CSS</p>-->
   </div>
-  <div class="w3-container" >
+  <div class="w3-container left-float" >
     <p><i class="fa fa-briefcase w3-margin-right"></i>PhD candidate, HKUST</p>
     <!--<p><i class="fa fa-map-marker w3-margin-right"></i>Hong Kong, China</p> -->
-    <p><i class="fa fa-envelope w3-margin-right "></i>huajian.huang99@gmail.com<br/>
-    hhuangbg@connect.ust.hk
+    <p><i class="fa fa-envelope w3-margin-right"></i>huajian.huang99@gmail.com<br/>
+      <span class="w3-margin-xleft">hhuangbg@connect.ust.hk</span>
     </p>
     <div class="w3-panel w3-center" style = "line-height: 60%">
       <a class= "tooltip w3-padding-small" href="https://github.com/HuajianUP" target="_blank">
-          <i class="fa fa-github w3-xlarge w3-hover-opacity"></i>
+          <i class="fa fa-github w3-xxlarge w3-hover-opacity"></i>
           <span class="tooltiptext" style = "margin-left: -65%;" >Github</span>
       </a>
       <a class= "tooltip w3-padding-small" href="assets/CV-Huajian-latest.pdf">
-          <img style="width:19px;margin-bottom:8px" src="assets/cv.svg"></img>
+          <img style="width:28px;margin-bottom:15px" src="assets/cv.svg">
           <span class="tooltiptext">CV</span>
       </a>
     </div>
     <hr>
   </div>
-  
+
   <div class="w3-container w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="font-weight:bold"><br>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
   <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button">PUBULICATION</a>
 </div>
 
 
-  
+
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -85,15 +85,17 @@ if (!doNotTrack) {
     <h3><b class="w3-text-grey">Education</b></h3>
     <table class="table pub" style="width: 100%;">
       <tr>
-        <td class="w3-padding-large" style="border-bottom: none;"><img src="thumbnails/logo-hkust.png" class="tn-icon" style="margin-left: 10%" alt="" /></td>
+        <td class="w3-padding-large edu-figure-container" style="border-bottom: none;">
+          <img src="thumbnails/logo-hkust.png" class="tn-icon" alt="" />
+        </td>
         <td style="padding: 1px; border-bottom: none;">
           <div class="title" style="font-size:16px">THE HONG KONG UNIVERSITY OF SCIENCE AND TECHNOLOGY</div>
           <div class="journal">PhD, Computer Science and Engineering</div>
           <div class="title w3-small"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - </div>
         </td>
-      </tr>    
+      </tr>
       <tr>
-        <td class="w3-padding-large" style="border-bottom: none;"><img src="thumbnails/logo-sysu.gif" class="tn-icon" style="margin-left: 10%" alt="" /></td>
+        <td class="w3-padding-large edu-figure-container" style="border-bottom: none;"><img src="thumbnails/logo-sysu.gif" class="tn-icon" alt="" /></td>
         <td style="padding: 1px; border-bottom: none;">
           <div class="title" style="font-size:16px">SUN YAT-SEN UNIVERSITY</div>
           <div class="journal">B.Eng, Telecommunication Engineering </div>
@@ -109,89 +111,118 @@ if (!doNotTrack) {
       <tr>
         <td></td>
         <td></td>
-      </tr>    
-
+      </tr>
+      <!-- backup version
       <tr>
-        <td class="tn-td w3-padding"><img src="thumbnails/360Roam.png" class="tn-img" alt="" /></td>
-        <td>
+        <td class="tn-td w3-padding">
+          <img src="thumbnails/360Roam.png" class="tn-img img-small" alt="" />
+        </td>
+        <td class="tn-td w3-padding">
           <div style="padding: 1px; margin-top: auto" class="title">360Roam: Real-Time Indoor Roaming Using Geometry-Aware 360&#7506 Radiance Fields</div>
           <div class="author" style="line-height: 2.4;"><span class="me">Huajian Huang</span>, Yingshu Chen, Tianjia Zhang and Sai-Kit Yeung</div>
-          <!--div class="journal">
-            <span class="journal-title"></span>,
-            <span class="journal-year">2022</span>
-          </div-->
           <div class="link">
             <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Roam/" target="_blank">Project Page</a>
             <a class="btn btn-primary outline" href="https://arxiv.org/abs/2208.02705" target="_blank">Paper</a>
             <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Roam/" target="_blank">Dataset(coming)</a>
           </div>
         </td>
-      </tr>
+      </tr>-->
 
       <tr>
-        <td class="tn-td w3-padding"><img src="thumbnails/360Mapping.png" class="tn-img" alt="" /></td>
-        <td>
-          <div style="padding: 1px; margin-top: auto" class="title">360ST-Mapping: An Online Semantics-Guided topological mapping Module for Omnidirectional Visual SLAM</div>
-          <div class="author" style="line-height: 2.4;">Hongji Liu, <span class="me">Huajian Huang</span>, Sai-Kit Yeung and Ming Liu</div>
-          <div class="journal">
-            <span class="journal-title">In Proc. of International Conference on Intelligent Robots and Systems (IROS)</span>,
-            <span class="journal-year">2022</span>
-          </div>
-          <div class="link">
-            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Mapping/" target="_blank">Project Page</a>
-            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Mapping/360Mapping.pdf" target="_blank">Paper</a>
+        <td class="tn-td w3-padding paper-container">
+          <div class="img-resize"> <img src="thumbnails/360Roam.png" class="tn-img" alt="" /> </div>
+          <div class="info-resize">
+            <div style="padding: 1px; margin-top: auto" class="title">360Roam: Real-Time Indoor Roaming Using Geometry-Aware 360&#7506 Radiance Fields</div>
+            <div class="author"><span class="me">Huajian Huang</span>, Yingshu Chen, Tianjia Zhang and Sai-Kit Yeung</div>
+            <!--div class="journal">
+              <span class="journal-title"></span>,
+              <span class="journal-year">2022</span>
+            </div-->
+            <div class="link">
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Roam/" target="_blank">Project Page</a>
+              <a class="btn btn-primary outline" href="https://arxiv.org/abs/2208.02705" target="_blank">Paper</a>
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Roam/" target="_blank">Dataset(coming)</a>
+            </div>
           </div>
         </td>
       </tr>
 
       <tr>
-        <td class="tn-td w3-padding"><img src="thumbnails/360VO.png" class="tn-img" alt="" /></td>
-        <td>
-          <div style="padding: 1px; margin-top: auto" class="title">360VO: Visual Odometry Using A Single 360 Camera</div>
-          <div class="author" style="line-height: 2.4;"><span class="me">Huajian Huang</span> and Sai-Kit Yeung</div>
-          <div class="journal">
-            <span class="journal-title">In Proc. of the IEEE International Conference on Robotics and Automation (ICRA)</span>,
-            <span class="journal-year">2022</span>
-          </div>
-          <div class="link">
-            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360VO/" target="_blank">Project Page</a>
-            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360VO/360VO_ICRA2022_final.pdf" target="_blank">Paper</a>
-            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360VO/360VO_supplementary.pdf" target="_blank">Supplementary</a>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="tn-td w3-padding"><img src="thumbnails/SiamX.png" class="tn-img" alt="" /></td>
-        <td>
-          <div style="padding: 1px; margin-top: auto" class="title">SiamX: An Efficient Long-term Tracker Using Cross-level Feature Correlation and Adaptive Tracking Scheme</div>
-          <div class="author" style="line-height: 2.4;"><span class="me">Huajian Huang</span> and Sai-Kit Yeung</div>
-          <div class="journal">
-            <span class="journal-title">In Proc. of the IEEE International Conference on Robotics and Automation (ICRA)</span>,
-            <span class="journal-year">2022</span>
-          </div>
-          <div class="link">
-            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/" target="_blank">Project Page</a>
-            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/SiamX_ICRA2022_final.pdf" target="_blank">Paper</a>
-            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/result.zip" target="_blank">Results</a>
-            <a class="btn btn-primary outline" href="https://github.com/HuajianUP/360Tracking" target="_blank">Code</a>
+        <td class="tn-td w3-padding paper-container">
+          <div class="img-resize"> <img src="thumbnails/360Mapping.png" class="tn-img" alt="" /> </div>
+          <div class="info-resize">
+            <div style="padding: 1px; margin-top: auto" class="title">360ST-Mapping: An Online Semantics-Guided topological mapping Module for Omnidirectional Visual SLAM</div>
+            <div class="author">Hongji Liu, <span class="me">Huajian Huang</span>, Sai-Kit Yeung and Ming Liu</div>
+            <div class="journal">
+              <span class="journal-title">In Proc. of International Conference on Intelligent Robots and Systems (IROS)</span>,
+              <span class="journal-year">2022</span>
+            </div>
+            <div class="link">
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Mapping/" target="_blank">Project Page</a>
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Mapping/360Mapping.pdf" target="_blank">Paper</a>
+            </div>
           </div>
         </td>
       </tr>
 
       <tr>
-        <td class="tn-td w3-padding"><img src="thumbnails/Dual_SLAM.png" class="tn-img" alt="" /></td>
-        <td>
-          <div style="padding: 1px; margin-top: auto;" class="title">Dual-SLAM: A Framework for Robust Single Camera Navigation</div>
-          <div class="author" style="line-height: 2.4;"><span class="me">Huajian Huang</span>, Wen-Yan Lin, Siying Liu, Dong Zhang and Sai-Kit Yeung</div>
-          <div class="journal">
-            <span class="journal-title">In Proc. of International Conference on Intelligent Robots and Systems (IROS)</span>,
-            <span class="journal-year">2020</span>
+        <td class="tn-td w3-padding paper-container">
+          <div class="img-resize"> <img src="thumbnails/360VO.png" class="tn-img" alt="" /> </div>
+
+          <div class="info-resize">
+            <div style="padding: 1px; margin-top: auto" class="title">360VO: Visual Odometry Using A Single 360 Camera</div>
+            <div class="author"><span class="me">Huajian Huang</span> and Sai-Kit Yeung</div>
+            <div class="journal">
+              <span class="journal-title">In Proc. of the IEEE International Conference on Robotics and Automation (ICRA)</span>,
+              <span class="journal-year">2022</span>
+            </div>
+            <div class="link">
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360VO/" target="_blank">Project Page</a>
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360VO/360VO_ICRA2022_final.pdf" target="_blank">Paper</a>
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360VO/360VO_supplementary.pdf" target="_blank">Supplementary</a>
+            </div>
           </div>
-          <div class="link">
-            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/Dual_SLAM/" target="_blank">Project Page</a>
-            <a class="btn btn-primary outline" href="https://arxiv.org/abs/2009.11219" target="_blank">Paper</a>
-            <a class="btn btn-primary outline" href="https://github.com/HuajianUP/Dual_SLAM" target="_blank">Code</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="tn-td w3-padding paper-container">
+          <div class="img-resize"> <img src="thumbnails/SiamX.png" class="tn-img" alt="" /> </div>
+
+          <div class="info-resize">
+            <div style="padding: 1px; margin-top: auto" class="title">SiamX: An Efficient Long-term Tracker Using Cross-level Feature Correlation and Adaptive Tracking Scheme</div>
+            <div class="author"><span class="me">Huajian Huang</span> and Sai-Kit Yeung</div>
+            <div class="journal">
+              <span class="journal-title">In Proc. of the IEEE International Conference on Robotics and Automation (ICRA)</span>,
+              <span class="journal-year">2022</span>
+            </div>
+            <div class="link">
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/" target="_blank">Project Page</a>
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/SiamX_ICRA2022_final.pdf" target="_blank">Paper</a>
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/SiamX/result.zip" target="_blank">Results</a>
+              <a class="btn btn-primary outline" href="https://github.com/HuajianUP/360Tracking" target="_blank">Code</a>
+            </div>
+          </div>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td class="tn-td w3-padding paper-container">
+          <div class="img-resize"> <img src="thumbnails/Dual_SLAM.png" class="tn-img" alt="" /> </div>
+
+          <div class="info-resize">
+            <div style="padding: 1px; margin-top: auto;" class="title">Dual-SLAM: A Framework for Robust Single Camera Navigation</div>
+            <div class="author"><span class="me">Huajian Huang</span>, Wen-Yan Lin, Siying Liu, Dong Zhang and Sai-Kit Yeung</div>
+            <div class="journal">
+              <span class="journal-title">In Proc. of International Conference on Intelligent Robots and Systems (IROS)</span>,
+              <span class="journal-year">2020</span>
+            </div>
+            <div class="link">
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/Dual_SLAM/" target="_blank">Project Page</a>
+              <a class="btn btn-primary outline" href="https://arxiv.org/abs/2009.11219" target="_blank">Paper</a>
+              <a class="btn btn-primary outline" href="https://github.com/HuajianUP/Dual_SLAM" target="_blank">Code</a>
+            </div>
           </div>
         </td>
       </tr>
@@ -209,7 +240,7 @@ function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
 }
- 
+
 function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";

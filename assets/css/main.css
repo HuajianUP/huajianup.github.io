@@ -48,9 +48,18 @@ A:hover {background: none; color: #706e6d; text-decoration: none; cursor: pointe
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  /*width: 50%;*/
+  text-align: center;
 }
 
+.left-float {
+    display: block;
+    margin: 0 5%;
+    text-align: left;
+}
+.w3-margin-xleft {
+    margin: 32px!important;
+}
 .video{
     position:relative;
     padding-bottom:56.25%;
@@ -254,6 +263,16 @@ a.sidebar-nav-item:focus {
     padding-right: 0.2em;
 }
 
+/*susan*/
+.edu-figure-container {
+    text-align: center;
+    /*width: calc(10vw);*/
+}
+.edu-icon {
+    max-width: 100px;
+    max-height: 100px;
+}
+
 .tn-img {
     max-width: 255px;
     max-height: 255px;
@@ -306,7 +325,7 @@ a.sidebar-nav-item:focus {
 }
 
 .author {
-
+    padding: 0.2em 0;
 }
 
 /*.link a:link {color: #FF6600; text-decoration: none; cursor: pointer;}*/
@@ -368,6 +387,25 @@ a.sidebar-nav-item:focus {
         margin-left: 14rem;
         margin-right: 2rem;
     }
+
+    .paper-container{
+        flex-direction: row !important;
+    }
+    .paper-container>*{
+        text-align: left!important;
+    }
+    .paper-container .img-resize {
+        width: calc(20vw)!important; /*small size*/
+        flex: 1 !important;
+    }
+    .paper-container .img-resize img {
+        max-width: 255px !important;
+    }
+    .paper-container .info-resize{
+        flex: 3 !important;
+        padding: 0.1rem 1rem !important;
+    }
+
 }
 
 @media (min-width: 64em) {
@@ -375,5 +413,30 @@ a.sidebar-nav-item:focus {
         margin-left: 18rem;
         margin-right: 4rem;
     }
+
 }
 
+/*Susan*/
+.img-resize {
+    width: calc(60vw); /*large size*/
+}
+/* When in small width size < 48em*/
+.paper-container{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+.paper-container>*{
+    text-align: center;
+    padding: 0.1rem;
+}
+.paper-container .img-resize{
+    flex: auto;
+}
+.paper-container .img-resize img {
+    max-width: 512px;
+}
+.paper-container .info-resize{
+    flex: auto;
+    padding: 1em 0;
+}
