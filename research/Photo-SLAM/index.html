@@ -32,13 +32,13 @@ if (!doNotTrack) {
 			<h1 class="w3-center w3-margin-top" style="font-size: 45px;"  id="360VO"><b>Photo-SLAM: Real-time Simultaneous Localization and Photorealistic Mapping for Monocular, Stereo, and RGB-D Cameras</b></h1>
 			<br>
 			<p><div class="w3-center" style="margin-left: 8px">
-				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang</a></em>, Longwei Li, Hui Cheng
+				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang<sup>1</sup></a></em>, Longwei Li<sup>2</sup>, Hui Cheng<sup>2</sup>
 				and 
-				<em><a href="http://www.saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a></em>
+				<em><a href="http://www.saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung<sup>1</sup></a></em>
 			</div></p>
 			
 			<p><div class="w3-center" style="margin-left: 4px">
-				The Hong Kong University of Science and Technology, Sun Yat-Sen University
+				The Hong Kong University of Science and Technology<sup>1</sup>, Sun Yat-Sen University<sup>2</sup>
 			</div></p>
 
 			<div  class="w3-center"> Computer Vision and Pattern Recognition Conference (CVPR), 2024.
@@ -50,16 +50,36 @@ if (!doNotTrack) {
 	        </div>
 	    </div>
 
+
+		<div class="w3-container w3-padding-large" style="margin-top:4%; margin-left:2%" >
+			<img style="width:100% ;margin-top: 20px"; src="../../thumbnails/Photo-SLAM_v2.gif" ></img>
+		    <div class="w3-container w3-padding-small plate" id="abstract">
+		    	<h2 id="abstract">Abstract</h2>
+		    </div>
+		    <p style="font-size: 18px;text-align: justify; "> The integration of neural rendering and the SLAM system recently showed promising results in joint 
+				localization and photorealistic view reconstruction. However, existing methods, fully relying on implicit representations, are so resource-hungry 
+				that they cannot run on portable devices, which deviates from the original intention of SLAM. In this paper, we present Photo-SLAM, a novel SLAM 
+				framework with a hyper primitives map. Specifically, we simultaneously exploit explicit geometric features for localization and learn implicit 
+				photometric features to represent the texture information of the observed environment. In addition to actively densifying hyper primitives based 
+				on geometric features, we further introduce a Gaussian-Pyramid-based training method to progressively learn multi-level features, enhancing 
+				photorealistic mapping performance. The extensive experiments with monocular, stereo, and RGB-D datasets prove that our proposed system 
+				Photo-SLAM significantly outperforms current state-of-the-art SLAM systems for online photorealistic mapping, e.g., PSNR is 30\% higher and 
+				rendering speed is hundreds of times faster in the Replica dataset. Moreover, the Photo-SLAM can run at real-time speed using an embedded platform 
+				such as Jetson AGX Orin, showing the potential of robotics applications.<br/>
+		    </p>
+		    <img style="width:100% ;margin-top: auto;"; src="img/overview.png" ></img>
+		</div>
+
 			
-	<div class="w3-container w3-padding-large" style="margin-top:10px; margin-left:2%;">
-		<h3 id="citation">Citation</h3>
-		<pre style="margin:0; background: #e8e8e7"><code><span>@inproceedings</span>{hhuang2024photoslam,
-		title = {Photo-SLAM: Real-time Simultaneous Localization and Photorealistic Mapping for Monocular, Stereo, and RGB-D Cameras},
-		author = {Huang, Huajian and Li, Longwei and Cheng Hui and Yeung, Sai-Kit},
-	    	booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-	    	year = {2024},
-		}</code></pre> 
-	</div>
+		<div class="w3-container w3-padding-large" style="margin-top:10px; margin-left:2%;">
+			<h3 id="citation">Citation</h3>
+			<pre style="margin:0; background: #e8e8e7"><code><span>@inproceedings</span>{hhuang2024photoslam,
+			title = {Photo-SLAM: Real-time Simultaneous Localization and Photorealistic Mapping for Monocular, Stereo, and RGB-D Cameras},
+			author = {Huang, Huajian and Li, Longwei and Cheng Hui and Yeung, Sai-Kit},
+				booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+				year = {2024},
+			}</code></pre> 
+		</div>
 	
 
 	</div>

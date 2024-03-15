@@ -32,11 +32,11 @@ if (!doNotTrack) {
 			<h1 class="w3-center w3-margin-top" style="font-size: 45px;"  id="360VO"><b>360Loc: A Dataset and Benchmark for Omnidirectional Visual Localization with Cross-device Queries</b></h1>
 			<br>
 			<p><div class="w3-center" style="margin-left: 8px">
-				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang*</a></em>, 
-				Changkun Liu*,
-				Yipeng Zhu, Hui Cheng,
-				<em><a href="https://braudt.people.ust.hk/index.html" style="border-bottom: 1px dotted black;">Tristan Braud</a></em>, 
-				<em><a href="http://www.saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a></em>
+				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang*<sup>1</sup></a></em>, 
+				Changkun Liu*<sup>1</sup>,
+				Yipeng Zhu<sup>1</sup>, Hui Cheng<sup>2</sup>,
+				<em><a href="https://braudt.people.ust.hk/index.html" style="border-bottom: 1px dotted black;">Tristan Braud<sup>1</sup></a></em>, 
+				<em><a href="http://www.saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung<sup>1</sup></a></em>
 			</div></p>
 
 			<p><div class="w3-center" style="margin-left: 4px">
@@ -44,7 +44,7 @@ if (!doNotTrack) {
 			</div></p>
 
 			<p><div class="w3-center" style="margin-left: 4px">
-				The Hong Kong University of Science and Technology, Sun Yat-Sen University
+				The Hong Kong University of Science and Technology<sup>1</sup>, Sun Yat-Sen University<sup>2</sup>
 			</div></p>
 
 			<div  class="w3-center"> Computer Vision and Pattern Recognition Conference (CVPR), 2024.
@@ -55,6 +55,31 @@ if (!doNotTrack) {
 	            <a class="btn btn-primary outline" href="https://arxiv.org/abs/2311.16728" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
 	        </div>
 	    </div>
+
+
+		<div class="w3-container w3-padding-large" style="margin-top:4%; margin-left:2%" >
+			<img style="width:100% ;margin-top: auto"; src="../../thumbnails/360Loc.png" ></img>
+		    <div class="w3-container w3-padding-small plate" id="abstract">
+		    	<h2 id="abstract">Abstract</h2>
+		    </div>
+		    <p style="font-size: 18px;text-align: justify; "> <br/>
+				Portable 360$^\circ$ cameras are becoming a cheap and efficient tool to establish large visual databases. 
+				By capturing omnidirectional views of a scene, these cameras could expedite building environment models 
+				that are essential for visual localization. However, such an advantage is often overlooked due to the lack 
+				of valuable datasets. This paper introduces a new benchmark dataset, 360Loc, composed of 360$^\circ$ images 
+				with ground truth poses for visual localization. We present a practical implementation of 360$^\circ$ mapping 
+				combining 360$^\circ$ images with lidar data to generate the ground truth 6DoF poses. 360Loc is the first dataset 
+				and benchmark that explores the challenge of cross-device visual positioning, involving 360$^\circ$ reference 
+				frames, and query frames from pinhole, ultra-wide FoV fisheye, and 360$^\circ$ cameras. We propose a virtual 
+				camera approach to generate lower-FoV query frames from 360$^\circ$ images, which ensures a fair comparison of 
+				performance among different query types in visual localization tasks. We also extend this virtual camera approach 
+				to feature matching-based and pose regression-based methods to alleviate the performance loss caused by the cross-device 
+				domain gap, and evaluate its effectiveness against state-of-the-art baselines. We demonstrate that omnidirectional visual 
+				localization is more robust in challenging large-scale scenes with symmetries and repetitive structures. These results 
+				provide new insights into 360-camera mapping and omnidirectional visual localization with cross-device queries.
+		    </p>
+		</div>
+
 
 			
 	<div class="w3-container w3-padding-large" style="margin-top:10px; margin-left:2%;">
