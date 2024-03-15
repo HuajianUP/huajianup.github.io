@@ -37,12 +37,16 @@ if (!doNotTrack) {
     <!--<p class="w3-text-grey">Template by W3.CSS</p>-->
   </div>
   <div class="w3-container left-float" >
-    <p><i class="fa fa-briefcase w3-margin-right"></i>PhD candidate, HKUST</p>
+    <p><i class="fa fa-briefcase w3-margin-right"></i>PhD, HKUST</p>
     <!--<p><i class="fa fa-map-marker w3-margin-right"></i>Hong Kong, China</p> -->
     <p><i class="fa fa-envelope w3-margin-right" style="display:inline;"></i>huajian.huang99@gmail.com<br/>
       <span class="w3-margin-xleft">hhuangbg@connect.ust.hk</span>
     </p>
     <div class="w3-panel w3-center" style = "line-height: 60%">
+      <a class= "tooltip w3-padding-small" href="https://scholar.google.com/citations?user=rOhG9NoAAAAJ&hl=en" target="_blank">
+        <img style="width:34px" src="assets/icons8-google-scholar.svg">
+        <span class="tooltiptext" style = "margin-left: -65%;" >Scholar</span>
+    </a>
       <a class= "tooltip w3-padding-small" href="https://github.com/HuajianUP" target="_blank">
           <i class="fa fa-github w3-xxlarge w3-hover-opacity"></i>
           <span class="tooltiptext" style = "margin-left: -65%;" >Github</span>
@@ -79,10 +83,20 @@ if (!doNotTrack) {
   <div class="w3-container w3-padding-large w3-card w3-margin-bottom" style="margin-left:10px">
     <h1><b>Huajian HUANG</b></h1>
     <!--obtained my bachelor degree from Sun Yat-Sen University, China. -->
-    <p style="text-align: justify;"> I am pursuing PhD in the Hong Kong University of Science and Technology, advised by Professor <a href="https://saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a>. I have passion in SLAM (simultaneous localization and mapping) and reconstruction. Recently I seek to explore omnidirectional vision for various tasks of computer vision and robotics.<br/>
+    <p style="text-align: justify;"> 
+      Hi, I'm Huajian Huang. 
+      I completed my PhD in Computer Science at the Hong Kong University of Science and Technology in 2023, 
+      advised by Professor <a href="https://saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a>. 
+      Before the PhD, I received my B.S. at the Sun Yat-Sen University, China.
+
+      My research focuses on omnidirectional perception, visual localization, mapping, SLAM and 3D vision.
+      <br/>
     </p>
 
-    <h3><b class="w3-text-grey">Education</b></h3>
+    <h3><b class="w3-text-grey">Update</b></h3>
+    [Feb 2024] Two papers accepted to CVPR 2024
+    [Dec 2023] Passed thesis defense. Thesis title: Omnidirectional Perception: Advancements in Robust Visual Localization and Mapping
+    <!--h3><b class="w3-text-grey">Education</b></h3>
     <table class="table pub" style="width: 100%;">
       <tr>
         <td class="w3-padding-large edu-figure-container" style="border-bottom: none;">
@@ -91,7 +105,7 @@ if (!doNotTrack) {
         <td style="padding: 1px; border-bottom: none;">
           <div class="title" style="font-size:16px">THE HONG KONG UNIVERSITY OF SCIENCE AND TECHNOLOGY</div>
           <div class="journal">PhD, Computer Science and Engineering</div>
-          <div class="title w3-small"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - </div>
+          <div class="title w3-small"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2023</div>
         </td>
       </tr>
       <tr>
@@ -102,7 +116,7 @@ if (!doNotTrack) {
           <div class="title w3-small"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014 - 2018</div>
         </td>
       </tr>
-    </table>
+    </table-->
   </div>
 
   <div class="w3-container w3-padding-large w3-card" style="margin-left:10px" id="publications">
@@ -119,20 +133,19 @@ if (!doNotTrack) {
           <div class="info-resize">
             <div style="padding: 1px; margin-top: auto" class="title">Photo-SLAM: Real-time Simultaneous Localization and Photorealistic Mapping for Monocular, Stereo, and RGB-D Cameras</div>
             <div class="author"><span class="me">Huajian Huang</span>, Longwei Li, Hui Cheng and Sai-Kit Yeung</div>
-            <!--div class="journal">
-              <span class="journal-title"></span>,
+            <div class="journal">
+              <span class="journal-title">In Proc. of Computer Vision and Pattern Recognition Conference (CVPR)</span>,
               <span class="journal-year">2024</span>
-            </div-->
+            </div>
             <div class="link">
               <!--a class="btn btn-primary outline" href="#" target="_blank">Project Page</a-->
-              <a class="btn btn-primary outline is-disabled" href="" target="_blank">Project Page</a>
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/Photo-SLAM" target="_blank">Project Page</a>
               <a class="btn btn-primary outline" href="https://arxiv.org/abs/2311.16728" target="_blank">Paper</a>
-              <a class="btn btn-primary outline is-disabled" href="" target="_blank">Code</a>
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Roam/" target="_blank">Code</a>
             </div>
           </div>
         </td>
       </tr>
-
 
       <tr>
         <td class="tn-td w3-padding paper-container">
@@ -140,15 +153,33 @@ if (!doNotTrack) {
           <div class="info-resize">
             <div style="padding: 1px; margin-top: auto" class="title">360Loc: A Dataset and Benchmark for Omnidirectional Visual Localization with Cross-device Queries</div>
             <div class="author"><span class="me">Huajian Huang</span>*, Changkun Liu*, Yipeng Zhu, Hui Cheng, Tristan Braud and Sai-Kit Yeung</div>
-            <!--div class="journal">
-              <span class="journal-title"></span>,
+            <div class="journal">
+              <span class="journal-title">In Proc. of Computer Vision and Pattern Recognition Conference (CVPR)</span>,
               <span class="journal-year">2024</span>
-            </div-->
+            </div>
             <div class="link">
               <!--a class="btn btn-primary outline" href="#" target="_blank">Project Page</a-->
-              <a class="btn btn-primary outline is-disabled" href="" target="_blank">Project Page</a>
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Loc/" target="_blank">Project Page</a>
               <a class="btn btn-primary outline" href="https://arxiv.org/abs/2311.17389" target="_blank">Paper</a>
-              <a class="btn btn-primary outline is-disabled" href="" target="_blank">Code</a>
+              <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360Loc/" target="_blank">Benchmark Dataset</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="tn-td w3-padding paper-container">
+          <div class="img-resize"> <img src="thumbnails/HR-APR.jpg" class="tn-img" alt="" /> </div>
+          <div class="info-resize">
+            <div style="padding: 1px; margin-top: auto" class="title">HR-APR: APR-agnostic Framework with Uncertainty Estimation and Hierarchical Refinement for Camera Relocalisation</div>
+            <div class="author">Changkun Liu, Shuai Chen, Yukun Zhao, <span class="me">Huajian Huang</span>, Victor Prisacariu and Tristan Braud</div>
+            <div class="journal">
+              <span class="journal-title">In Proc. of the IEEE International Conference on Robotics and Automation (ICRA)</span>,
+              <span class="journal-year">2024</span>
+            </div>
+            <div class="link">
+              <a class="btn btn-primary outline is-disabled" href="https://lck666666.github.io/research/HR-APR/index.html" target="_blank">Project Page</a>
+              <a class="btn btn-primary outline" href="https://arxiv.org/abs/2402.14371" target="_blank">Paper</a>
             </div>
           </div>
         </td>
