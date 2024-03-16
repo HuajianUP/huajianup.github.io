@@ -353,6 +353,9 @@ a.sidebar-nav-item:focus {
 /*.link a:visited {color: #FF6600; text-decoration: none; cursor: pointer;}*/
 /*.link a:hover {color: #FF6600; text-decoration: none; cursor: pointer;}*/
 /*.link a:active { color: #FF6600; background: none; cursor: pointer;}*/
+.btn {
+
+}
 
 .btn.outline {
     background: none;
@@ -473,9 +476,52 @@ a.sidebar-nav-item:focus {
     opacity: 0.5;
     text-decoration: none;
 }
-
+.abstract-text {
+    display: block;
+}
+.result-text {
+    font-size: 20px;
+}
 /*Susan: project page slider*/
-.slider-img {
-    padding: 0 5%;
+
+/*Buttons for active image/video display*/
+.btn-img {
+    padding: 0 1%;
     width: 100%;
+}
+.button-row {
+    /*display: inline-block;*/
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.display-btn {
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+
+    white-space: nowrap;
+    background: none;
+    padding: 8px!important;
+    font-size: medium;
+    border-radius: 6px;
+    margin: 2px 5px;
+    min-width: 15%;
+}
+.display-btn:active, .display-btn.active {
+    background-color: #d9e8ec;
+}
+.display-btn:hover, .display-btn:focus {
+    color: #33a6cc !important;
+    border-color: #33a6cc !important;
+    background: none !important;
 }
