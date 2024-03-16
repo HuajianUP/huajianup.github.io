@@ -8,10 +8,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Titillium Web", sans-serif}
-</style>
-<body class="w3-light-grey w3-content" style="max-width:1300px">
+<!--<style> Moved to main.css-->
+<!--body,h1,h2,h3,h4,h5,h6 {font-family: "Titillium Web", sans-serif}-->
+<!--</style>-->
+
+<body class="hj-white w3-content" style="max-width:1300px">
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -27,13 +28,13 @@ if (!doNotTrack) {
 
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse hj-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container center">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove w3-large"></i>
     </a>
     <img src="thumbnails/me.jpg" style="width:55%;" class="w3-round"><br><br>
-    <h4><b>Huajian Huang</b></h4>
+    <h4><b>Huajian Huang <span lang="cn">(黄华健)</span></b></h4>
     <!--<p class="w3-text-grey">Template by W3.CSS</p>-->
   </div>
   <div class="w3-container left-float" >
@@ -42,24 +43,29 @@ if (!doNotTrack) {
     <p><i class="fa fa-envelope w3-margin-right" style="display:inline;"></i>huajian.huang99@gmail.com<br/>
       <span class="w3-margin-xleft">hhuangbg@connect.ust.hk</span>
     </p>
-    <div class="w3-panel w3-center" style = "line-height: 60%">
-      <a class= "tooltip w3-padding-small" href="https://scholar.google.com/citations?user=rOhG9NoAAAAJ&hl=en" target="_blank">
-        <img style="width:34px" src="assets/icons8-google-scholar.svg">
-        <span class="tooltiptext" style = "margin-left: -65%;" >Scholar</span>
-    </a>
-      <a class= "tooltip w3-padding-small" href="https://github.com/HuajianUP" target="_blank">
-          <i class="fa fa-github w3-xxlarge w3-hover-opacity"></i>
-          <span class="tooltiptext" style = "margin-left: -65%;" >Github</span>
+
+    <div class=" tooltip-container">
+      <a class= "tooltip w3-padding-small tooltiplogo-hover" href="https://scholar.google.com/citations?user=rOhG9NoAAAAJ&hl=en" target="_blank">
+        <img style="width:34px; height:34px" class="w3-hover-opacity" src="assets/icons8-google-scholar.svg">
+        <span class="tooltiptext" >Scholar</span>
       </a>
-      <a class= "tooltip w3-padding-small" href="assets/CV-Huajian-latest.pdf">
-          <img style="width:34px" src="assets/cv.svg">
-          <span class="tooltiptext">CV</span>
+      <a class= "tooltip w3-padding-small tooltiplogo-hover" href="https://github.com/HuajianUP" target="_blank">
+        <i style="width:34px; height:34px" class="fa fa-github w3-xxlarge w3-hover-opacity "></i>
+        <span class="tooltiptext">Github</span>
       </a>
+      <a class= "tooltip w3-padding-small tooltiplogo-hover" href="assets/CV-Huajian-latest.pdf">
+        <img style="width:34px; height:34px" class="w3-hover-opacity tooltiplogo-hover" src="assets/cv.svg">
+        <span class="tooltiptext">CV</span>
+      </a>
+<!--      <a class= "tooltip w3-padding-small" href="#NEW">-->
+<!--        <img style="width:34px" src="assets/NEW.svg">-->
+<!--        <span class="tooltiptext">NEW</span>-->
+<!--      </a>-->
     </div>
     <hr>
   </div>
 
-  <div class="w3-container w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="font-weight:bold"><br>
+  <div class="w3-container w3-bar-block hj-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="font-weight:bold"><br>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
   <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button">PUBULICATION</a>
 </div>
@@ -83,19 +89,22 @@ if (!doNotTrack) {
   <div class="w3-container w3-padding-large w3-card w3-margin-bottom" style="margin-left:10px">
     <h1><b>Huajian HUANG</b></h1>
     <!--obtained my bachelor degree from Sun Yat-Sen University, China. -->
-    <p style="text-align: justify;"> 
-      Hi, I'm Huajian Huang. 
-      I completed my PhD in Computer Science at the Hong Kong University of Science and Technology in 2023, 
-      advised by Professor <a href="https://saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a>. 
+    <p style="text-align: justify;">
+      Hi, I'm Huajian Huang.
+      I completed my PhD in Computer Science at the Hong Kong University of Science and Technology in 2023,
+      advised by Professor <a href="https://saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a>.
       Before the PhD, I received my B.S. at the Sun Yat-Sen University, China.
 
       My research focuses on omnidirectional perception, visual localization, mapping, SLAM and 3D vision.
       <br/>
     </p>
 
-    <h3><b class="w3-text-grey">Update</b></h3>
-    [Feb 2024] Two papers accepted to CVPR 2024<br/>
-    [Dec 2023] Passed thesis defense. Thesis title: Omnidirectional Perception: Advancements in Robust Visual Localization and Mapping
+    <h4><b class="w3-text-dark-gray">Update</b></h4>
+    <ul>
+      <li>[Feb 2024] Two papers accepted to CVPR 2024</li>
+      <li>[Dec 2023] Passed thesis defense. Thesis title: Omnidirectional Perception: Advancements in Robust Visual Localization and Mapping</li>
+    </ul>
+
     <!--h3><b class="w3-text-grey">Education</b></h3>
     <table class="table pub" style="width: 100%;">
       <tr>
@@ -207,7 +216,7 @@ if (!doNotTrack) {
           </div>
         </td>
       </tr>
-      
+
       <!-- backup version
       <tr>
         <td class="tn-td w3-padding">
@@ -260,7 +269,7 @@ if (!doNotTrack) {
           </div>
         </td>
       </tr>
-      
+
       <tr>
         <td class="tn-td w3-padding paper-container">
           <div class="img-resize"> <img src="thumbnails/360Mapping.png" class="tn-img" alt="" /> </div>

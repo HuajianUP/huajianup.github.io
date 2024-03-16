@@ -1562,6 +1562,13 @@ a {
     background-color: #fff!important
 }
 
+/*Susan customized color*/
+.hj-white,
+.hj-hover-white:hover {
+    color: #000!important;
+    background-color: #fefefe!important
+}
+
 .w3-black,
 .w3-hover-black:hover {
     color: #fff!important;
