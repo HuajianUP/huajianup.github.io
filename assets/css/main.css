@@ -28,6 +28,13 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 
+/*Susan customized color*/
+.hj-white,
+.hj-hover-white:hover {
+    color: #000!important;
+    background-color: #fefefe!important
+}
+
 a:link {background: none; text-decoration: none; cursor: pointer;}
 /*A:visited {background: none; color: #D9661F; text-decoration: none; cursor: pointer;}*/
 a:hover {background: none; color: #706e6d; text-decoration: none; cursor: pointer; border-bottom: 1px dotted black;}
@@ -54,6 +61,9 @@ a:hover {background: none; color: #706e6d; text-decoration: none; cursor: pointe
 }
 .w3-margin-xleft {
     margin: 32px!important;
+}
+.hj-padding {
+    padding: 8px 16px !important
 }
 .video{
     position:relative;
@@ -478,9 +488,15 @@ a.sidebar-nav-item:focus {
 }
 .abstract-text {
     display: block;
+    text-align: justify;
 }
 .result-text {
     font-size: 20px;
+}
+.citation-code {
+    padding: 16px;
+    background: #e8e8e7;
+    border-radius: 10px;
 }
 /*Susan: project page slider*/
 
@@ -525,3 +541,226 @@ a.sidebar-nav-item:focus {
     border-color: #33a6cc !important;
     background: none !important;
 }
+
+/*Susan: carousel with dots*/
+.results-carousel {
+    overflow: hidden;
+}
+.results-carousel .carousel-item {
+    margin: 5px;
+    overflow: hidden;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    padding: 0;
+    font-size: 0;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    /*height: 600px;*/
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none;
+}
+
+
+.slide-container {
+    display: block;
+}
+
+.slide-image {
+    display: none;
+    /*display: block;*/
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+    /*top: 0;*/
+    /*opacity: 0;*/
+    transition: all .7s ease-in-out;
+}
+
+.slide-image img {
+    width: auto;
+    padding: 0 42px;
+    padding-bottom: 30px;
+    width: 90%;
+    height: 90%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    /*font-size: 100px;*/
+    /*line-height: 600px;*/
+    color: #3B7EA1;
+}
+
+
+/*@media screen and (max-width: 800px) {*/
+/*    ul.slides {*/
+/*        max-height: 300px;*/
+/*    }*/
+/*    .carousel-controls {*/
+/*        line-height: 300px;*/
+/*    }*/
+/*}*/
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 1px;
+    opacity: 0.5;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+.carousel-controls span{
+    font-size: 40px;
+}
+.slide-image:hover {
+    opacity: 0.3;
+}
+/*+ .carousel-controls label*/
+.carousel-controls label:hover, .carousel-controls label:active {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3B7EA1;
+    opacity: 0.5;
+    margin: 10px;
+}
+.carousel-dot:hover, .carousel-dot:active, .carousel-dot.active {
+    opacity: 1;
+}
+
+input:checked + .slide-container .slide-image {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+    display: block;
+}
+/*input#img-3:checked ~ .carousel-dots label#img-dot-3,*/
+/*input#img-4:checked ~ .carousel-dots label#img-dot-4,*/
+/*input#img-5:checked ~ .carousel-dots label#img-dot-5,*/
+/*input#img-6:checked ~ .carousel-dots label#img-dot-6*/
+/*input#360loc-res-ir1:checked ~ .carousel-dots label#360loc-img-dot-0,*/
+/*input#360loc-res-ir2:checked ~ .carousel-dots label#360loc-img-dot-1*/
+/*{*/
+/*    opacity: 1;*/
+/*}*/
+
+
+input:checked + .slide-container .nav label { display: block; }
+
+/*!*copy from bluma-carousel*!*/
+/*.slider-container {*/
+/*    display: flex;*/
+/*    flex-wrap: nowrap;*/
+/*    flex-direction: row;*/
+/*    overflow: hidden;*/
+/*    -webkit-transform: translate3d(0,0,0);*/
+/*    transform: translate3d(0,0,0);*/
+/*    min-height: 100%;*/
+/*}*/
+/*.slider-navigation-next, .slider-navigation-previous {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    position: absolute;*/
+/*    width: 42px;*/
+/*    height: 42px;*/
+/*    background: #fff center center no-repeat;*/
+/*    background-size: 20px 20px;*/
+/*    border: 1px solid #fff;*/
+/*    border-radius: 25091983px;*/
+/*    box-shadow: 0 2px 5px #3232321a;*/
+/*    top: 50%;*/
+/*    margin-top: -20px;*/
+/*    left: 0;*/
+/*    cursor: pointer;*/
+/*    transition: opacity .3s,-webkit-transform .3s;*/
+/*    transition: transform .3s,opacity .3s;*/
+/*    transition: transform .3s,opacity .3s,-webkit-transform .3s;*/
+/*}*/
+/*.slider-navigation-next {*/
+/*    left: auto;*/
+/*    right: 0;*/
+/*    background: #fff center center no-repeat;*/
+/*    background-size: 20px 20px;*/
+/*}*/
+/*.slider-pagination {*/
+/*    display: none;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    padding: .5rem 1rem;*/
+/*    text-align: center;*/
+/*}*/
+/*@media screen and (min-width: 800px) {*/
+/*    .slider-pagination {*/
+/*    display: flex;*/
+/*}*/
+/*}*/
+/*.slider-pagination .slider-page {*/
+/*    background: #fff;*/
+/*    width: 10px;*/
+/*    height: 10px;*/
+/*    border-radius: 25091983px;*/
+/*    display: inline-block;*/
+/*    margin: 0 3px;*/
+/*    box-shadow: 0 2px 5px #3232321a;*/
+/*    transition: -webkit-transform .3s;*/
+/*    transition: transform .3s;*/
+/*    transition: transform .3s,-webkit-transform .3s;*/
+/*    cursor: pointer;*/
+/*}*/
