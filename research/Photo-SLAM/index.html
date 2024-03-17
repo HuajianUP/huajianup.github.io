@@ -52,6 +52,7 @@ if (!doNotTrack) {
 
 		<div class="w3-container w3-padding-large" style="margin-top:4%; margin-left:2%" >
 			<img style="width:100% ;margin-top: auto"; src="../../thumbnails/Photo-SLAM_v2.gif" ></img>
+
 		    <div class="w3-container w3-padding-small plate" id="abstract">
 		    	<h2 id="abstract">Abstract</h2>
 		    </div>
@@ -75,12 +76,36 @@ if (!doNotTrack) {
 			<!--which capitalizes on explicit geometric feature points for accurate and efficient localization 
 				while leveraging implicit representations to capture and model the texture information.-->
 		    <p style="font-size: 18px;text-align: justify; "> 
-				1. maintain a map with hyper primitives online<br/>
-				2. geometry-based densification<br/>
-				3. Gaussian-pyramid-based learning<br/>
-				<img style="width:100% ;margin-top: auto"; src="img/overview.jpg" ></img> 
-				<img style="width:100% ;margin-top: auto"; src="img/Geo.jpg" ></img> 
-				<img style="width:100% ;margin-top: auto"; src="img/GP_learning.jpg" ></img> 
+				1. Introduce the concept of hyper primitives map. 
+				<details>
+					<summary>Details</summary>
+					Hyper primitives are defined as a set of point clouds associated with ORB features, rotation, scaling, ensity, 
+					and spherical harmonic (SH) coefficients. The hyper primitives map allows the system to efficiently optimize 
+					tracking using a factor graph solver and learn the corresponding mapping by backpropagating the loss between
+					the original images and rendering images.
+					<img style="width:100% ;margin-top: auto"; src="img/overview.jpg" ></img> 
+				  </details>
+				<br/>
+				2. Geometry-based densification
+				<details>
+					<summary>Details</summary>
+					We argue that 2D geometric feature points spatially distributed in the frames essentially represent the region
+					with a complex texture that requires more hyper primitives. However, less than 30% of 2D geometric feature points 
+					of frames are active and have corresponding 3D points, especially for non-RGB-D scenarios. Therefore, we actively 
+					create additional temporary hyper primitives based on the inactive 2D feature points.
+					<img style="width:100% ;margin-top: auto"; src="img/Geo.jpg" ></img> 
+				  </details><br/>
+				3. Gaussian-pyramid-based learning, a new progressive training method.
+				<details>
+					<summary>Details</summary>
+					Progressive training is a widely used technology in neural rendering to accelerate the optimization process. 
+					Some methods have been proposed to reduce training time while achieving better rendering quality. 
+					To enhance performance with efficient multi-level features learning online, we propose Gaussian-pyramid-based learning.
+					At the beginning training step, the hyper primitives are supervised by the highest level of the pyramid, i.e. level n. 
+					As training iteration increases, we not only densify hyper primitives but also reduce the pyramid level and obtain a 
+					new ground truth until reaching the bottom of the Gaussian pyramid.
+					<img style="width:100% ;margin-top: auto"; src="img/GP_learning.jpg" ></img> 
+				  </details><br/>
 		    </p>
 		</div>
 
