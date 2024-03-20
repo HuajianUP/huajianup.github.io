@@ -620,12 +620,17 @@ ul.slides2 input {
     height: 100%;
 }
 
+.slide-image.video iframe{
+    padding: 0 42px;
+    z-index: 999;
+}
+
 .carousel-controls {
     position: absolute;
-    top: 45%;
+    top: calc(50% - 30px); /*carousel-dots with height=20px(height)+10px(margin)*/
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 0;
     /*font-size: 100px;*/
     /*line-height: 600px;*/
     color: #3B7EA1;
@@ -679,6 +684,36 @@ ul.slides2 input {
     background-color: #3B7EA1;
     opacity: 0.5;
     margin: 10px;
+}
+
+.carousel-btns {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.carousel-btn {
+    display: inline-block;
+    opacity: 0.5;
+    background: none;
+    font-size: medium;
+    padding: 5px;
+    border: 2px solid #3B7EA1;
+    color: #3B7EA1;
+    border-radius: 5px;
+    margin: 5px;
+}
+.carousel-btn:hover, .carousel-btn:focus{
+    color: #33a6cc;
+    border-color: #33a6cc;
+    opacity: 1;
+}
+.carousel-btn:active,.carousel-btn.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
+    opacity: 1;
 }
 .carousel-dot:hover, .carousel-dot:active, .carousel-dot.active {
     opacity: 1;
