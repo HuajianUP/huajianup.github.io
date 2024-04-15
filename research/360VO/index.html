@@ -5,13 +5,14 @@
 <title>360VO: Visual Odometry Using A Single 360 Camera</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="https://huajianup.github.io/assets/css/main.css">
-
-<!--<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">-->
-
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<script src="../../assets/js/fontawesone.6.5.1.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="../../assets/css/w3.css">
+<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
+<script src="../../assets/js/jquery.min.3.7.1.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -27,156 +28,258 @@ if (!doNotTrack) {
 
 <body class="w3-content" style="max-width:1000px">
 
-	<div class="w3-container w3-card w3-padding-large" >
-		<div style="margin-top:9%">
-			<h1 class="w3-center w3-margin-top" style="font-size: 45px;"  id="360VO"><b>360VO: Visual Odometry Using A Single 360 Camera</b></h1>
-			<br>
-			<p><div class="w3-center" style="margin-left: 8px">
-				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang</a></em> and 
+	<div class="w3-container hj-padding" >
+
+		<div>
+			<h1 class="w3-center w3-margin-top" id="360VO"><b>360VO: Visual Odometry Using A Single 360 Camera</b></h1>
+
+			<div class="w3-center">
+				<p>
+				<em><a href="https://huajianup.github.io" style="border-bottom: 1px dotted black;">Huajian Huang</a></em> and
 				<em><a href="http://www.saikit.org" style="border-bottom: 1px dotted black;">Sai-Kit Yeung</a></em>
-			</div></p>
-			
-			<p><div class="w3-center" style="margin-left: 4px">
-				The Hong Kong University of Science and Technology
-			</div></p>
+				</p>
+				<p>The Hong Kong University of Science and Technology</p>
+			</div>
 
-			<div  class="w3-center"> IEEE International Conference on Robotics and Automation (ICRA), 2022.
-				</div>
+			<div  class="w3-center"> IEEE International Conference on Robotics and Automation (ICRA), 2022.</div>
 
-			<br>
-			<div class="link w3-center">
-	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360VO/360VO_ICRA2022.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
-	            <a class="btn btn-primary outline" href="https://huajianup.github.io/research/360VO/360VO_supplementary.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Supplementary</a>
-	            <a class="btn btn-primary outline" href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/hhuangbg_connect_ust_hk/Es0Kgy2ezN9ItAPak8XpVYMBSH5EFn4SZYzSwmgtfeS1Zw?e=rOkCjd" target="_blank"><i class="fa fa-file-archive-o" style="margin-right: 5px"></i>Dataset</a>
+			<div class="link w3-center pub">
+	            <a class="btn btn-primary outline big-outline" href="https://huajianup.github.io/research/360VO/360VO_ICRA2022.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Paper</a>
+	            <a class="btn btn-primary outline big-outline" href="https://huajianup.github.io/research/360VO/360VO_supplementary.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="margin-right: 5px"></i>Supplementary</a>
+	            <a class="btn btn-primary outline big-outline" href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/hhuangbg_connect_ust_hk/Es0Kgy2ezN9ItAPak8XpVYMBSH5EFn4SZYzSwmgtfeS1Zw?e=rOkCjd" target="_blank"><i class="fa fa-file-archive-o" style="margin-right: 5px"></i>Dataset</a>
 	        </div>
 	    </div>
 
-		<div class="w3-container w3-padding-large" style="margin-top:4%; margin-left:2%" >
-		    <div class="w3-container w3-padding-small plate" id="abstract">
-		    	<h2 id="abstract">Abstract</h2>
-		    </div>
-		    <p style="font-size: 18px;text-align: justify; "> In this paper, we propose a novel direct visual odometry algorithm to take the advantage of a 360-degree camera for robust localization and mapping. Our system extends direct sparse odometry by using a spherical camera model to process equirectangular images without rectification to attain omnidirectional perception. After adapting mapping and optimization algorithms to the new model, camera parameters, including intrinsic and extrinsic parameters, and 3D mapping can be jointly optimized within the local sliding window. In addition, we evaluate the proposed algorithm using both real world and large-scale simulated scenes for qualitative and quantitative validations. The extensive experiments indicate that our system achieves start of the art results. <br/>
-		    </p>
+		<div class="w3-container w3-padding-16" >
+			<div class="w3-container hj-padding plate" id="abstract">
+				<h3>Abstract</h3>
+			</div>
+		    <h6 class="abstract-text"> In this paper, we propose a novel direct visual odometry algorithm to take the advantage of a 360-degree camera for robust localization and mapping. Our system extends direct sparse odometry by using a spherical camera model to process equirectangular images without rectification to attain omnidirectional perception. After adapting mapping and optimization algorithms to the new model, camera parameters, including intrinsic and extrinsic parameters, and 3D mapping can be jointly optimized within the local sliding window. In addition, we evaluate the proposed algorithm using both real world and large-scale simulated scenes for qualitative and quantitative validations. The extensive experiments indicate that our system achieves start of the art results. <br/>
+			</h6>
 		    <img style="width:100% ;margin-top: auto;"; src="img/overview.png" ></img>
 		</div>
 
-		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
-		    <div class="w3-container w3-padding-small plate" id="video">
-		    	<h2>Video</h2>
+		<div class="w3-container hj-padding" >
+
+		    <div class="w3-container hj-padding plate" id="video">
+		    	<h3>Video</h3>
 		    </div>
-		    <div class="video" >
+		    <div class="video w3-margin-top w3-margin-bottom">
 			  <iframe src="https://www.youtube.com/embed/6FZXevqsEzs" allowfullscreen title="YouTube Video"></iframe>
 			</div>
 		</div>
 
-		<div class="w3-container w3-padding-large" style="margin-top:30px; margin-left:2%;margin-bottom:10px;">
-		    <div class="w3-container w3-padding-small plate" id="dataset">
-		    	<h2>Dataset</h2>
+		<div class="w3-container hj-padding" >
+		    <div class="w3-container hj-padding plate" id="dataset">
+		    	<h3>Dataset</h3>
 		    </div>
-		    <div class="w3-row, w3-center">
-			    <div class="w3-col" style="width:19.2%">
-			    	<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EXuPmydHeitOvh85W0lY-EABYhzJzGuJJnIaqULbST0WXw?e=ERVkp2"> <img src="img/seq0.png" style="width:100%"> </a>
-			    </div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
-			    	<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/Ea-lkgw2HOxNpFmYHb7uMMUB0o3W-yA8OMUxZMjknBJF4g?e=Oz1eTg"> <img src="img/seq1.png" style="width:100%"> </a>
-			    </div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
-			    	<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EcNg8FESkg9PqJfvEDoG0vsB2-X1Qbjx2oRI20IuYMa7YA?e=DEqqWk"> <img src="img/seq2.png" style="width:100%"> </a>
-			    </div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
-			    	<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EbGRJ8c4JkxDuQ0skPPzVfMBfdtNCPwLfLjOnQKHs-APdA?e=BpITt9"> <img src="img/seq3.png" style="width:100%"> </a>
-			    </div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
-			    	<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/Eal_UWt5_1pIu5MUxB5GJuEBcH9Bn_qbioaYgbPP3B835g?e=sNPNon"> <img src="img/seq4.png" style="width:100%"> </a>
-			    </div>
-			    <div class="w3-col" style="width:19.2%;">Seq0</div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq1</div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq2</div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq3</div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq4</div>
-			</div>
+			<div class="w3-margin">
+				<div class="w3-row, w3-center">
+					<div class="w3-col" style="width:19.2%">
+						<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EXuPmydHeitOvh85W0lY-EABYhzJzGuJJnIaqULbST0WXw?e=ERVkp2" target="_blank"> <img src="img/seq0.png" style="width:100%"> </a>
+					</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">
+						<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/Ea-lkgw2HOxNpFmYHb7uMMUB0o3W-yA8OMUxZMjknBJF4g?e=Oz1eTg" target="_blank"> <img src="img/seq1.png" style="width:100%"> </a>
+					</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">
+						<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EcNg8FESkg9PqJfvEDoG0vsB2-X1Qbjx2oRI20IuYMa7YA?e=DEqqWk" target="_blank"> <img src="img/seq2.png" style="width:100%"> </a>
+					</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">
+						<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EbGRJ8c4JkxDuQ0skPPzVfMBfdtNCPwLfLjOnQKHs-APdA?e=BpITt9" target="_blank"> <img src="img/seq3.png" style="width:100%"> </a>
+					</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">
+						<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/Eal_UWt5_1pIu5MUxB5GJuEBcH9Bn_qbioaYgbPP3B835g?e=sNPNon" target="_blank"> <img src="img/seq4.png" style="width:100%"> </a>
+					</div>
+					<div class="w3-col" style="width:19.2%;">Seq0</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">Seq1</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">Seq2</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">Seq3</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">Seq4</div>
+				</div>
 
-		    <div class="w3-row, w3-center">
-			    <div class="w3-col" style="width:19.2%">
-			    	<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/Efb5eLCJraVDotodtxrxbEsBoZbak3PQ_0FYDo1o_Oy6PA?e=61jLik"> <img src="img/seq5.png" style="width:100%"> </a>
-			    </div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
-			    	<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EVsx-h2ZcUdLm4ac_LBzRZsBzJjbXt3BblCtpGutNlP1rg?e=RJkTuu"> <img src="img/seq6.png" style="width:100%"> </a>
-			    </div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
-			    	<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EVBMJ4MsgrNIqz9VvxyFajUBq7gdEb-C84anvXPbkK86vQ?e=vFu88T"> <img src="img/seq7.png" style="width:100%"> </a>
-			    </div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
-			    	<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/Eb8L_r0ISG5MgUNqGUmzZUwBfwGLdFZoAIkp9HOX2FM4ug?e=69xoNy"> <img src="img/seq8.png" style="width:100%"> </a>
-			    </div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">
-			    	<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EcAR6bLyxvRLibYYJDgEmCgB3mesTecP72ehAw9KscokhQ?e=oORxeP"> <img src="img/seq9.png" style="width:100%"> </a>
-			    </div>
-			    <div class="w3-col" style="width:19.2%;">Seq5</div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq6</div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq7</div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq8</div>
-			    <div class="w3-col" style="width:19.2%; margin-left:1%;">Seq9</div>
+				<div class="w3-row, w3-center">
+					<div class="w3-col" style="width:19.2%">
+						<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/Efb5eLCJraVDotodtxrxbEsBoZbak3PQ_0FYDo1o_Oy6PA?e=61jLik" target="_blank"> <img src="img/seq5.png" style="width:100%"> </a>
+					</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">
+						<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EVsx-h2ZcUdLm4ac_LBzRZsBzJjbXt3BblCtpGutNlP1rg?e=RJkTuu" target="_blank"> <img src="img/seq6.png" style="width:100%"> </a>
+					</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">
+						<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EVBMJ4MsgrNIqz9VvxyFajUBq7gdEb-C84anvXPbkK86vQ?e=vFu88T" target="_blank"> <img src="img/seq7.png" style="width:100%"> </a>
+					</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">
+						<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/Eb8L_r0ISG5MgUNqGUmzZUwBfwGLdFZoAIkp9HOX2FM4ug?e=69xoNy" target="_blank"> <img src="img/seq8.png" style="width:100%"> </a>
+					</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">
+						<a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/hhuangbg_connect_ust_hk/EcAR6bLyxvRLibYYJDgEmCgB3mesTecP72ehAw9KscokhQ?e=oORxeP" target="_blank"> <img src="img/seq9.png" style="width:100%"> </a>
+					</div>
+					<div class="w3-col" style="width:19.2%;">Seq5</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">Seq6</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">Seq7</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">Seq8</div>
+					<div class="w3-col" style="width:19.2%; margin-left:1%;">Seq9</div>
+				</div>
 			</div>
 		</div>
 
 
-		<div class="w3-container w3-padding-large" style="margin-top:30px; text-align: justify; margin-left:2%;margin-bottom:10px" >
-		    <div class="w3-container w3-padding-small plate" id="results">
-		    	<h2>Results</h2>
+		<div class="w3-container hj-padding">
+		    <div class="w3-container hj-padding plate" id="results">
+		    	<h3>Results</h3>
 		    </div>
 
- 			<div class="w3-row, w3-center" style="margin-top:1%">
+ 			<div class="w3-center w3-padding-16">
  				<div class="w3-col" style="width:49.2%">
-			    	<img src="img/rmse_mean.jpg" style="width:100%"> 
+			    	<img src="img/rmse_mean.jpg" style="width:100%">
 			    </div>
 			    <div class="w3-col" style="width:49.2%; margin-left:1%;">
 			    	<img src="img/rmse2_mean.jpg" style="width:100%">
 			    </div>
 			</div>
 			<p>Figure 1. Results on the synthesis dataset. Each sequence is run 10 times, and RMSE(m) of the trajectory is reported. The number at the top of each bar is the mean of RMSE. Ours 360VO achieves comparable results in contrast to OpenVSLAM. In addition, we rectify and crop the 360 images to perspective images of 90&#7506 FOV, and take them as input to run ORB-SLAM and DSO. It is obvious that the methods utilizing 360 camera are commonly more robust and precise. </p>
-			<div class="w3-row, w3-center" style="margin-top:1%">
-		    	<div class="w3-col" style="width:100%">
-			    	<img src="img/our43_2.png" style="width:100%"> 
+
+			<div class="w3-center w3-padding-16">
+		    	<div class="w3-col">
+			    	<img src="img/our43_2.png" style="width:100%">
 			    </div>
 			</div>
-			<p>Figure 2. Constraints between activated keyframes in the local optimization window are represented by <span style="color:blue;">blue</span> lines, while <span style="color:magenta;">magenta</span> curve denotes camera trajectory. The gray sphere denotes the current frame's position, while black points denote the 3D map. Since the same landmarks can be observed for a longer period, it has great consistency and low drift. </p>
+            <p class="w3-padding-16">Figure 2. Constraints between activated keyframes in the local optimization window are represented by <span style="color:blue;">blue</span> lines, while <span style="color:magenta;">magenta</span> curve denotes camera trajectory. The gray sphere denotes the current frame's position, while black points denote the 3D map. Since the same landmarks can be observed for a longer period, it has great consistency and low drift. </p>
 
-			<div class="video" style="margin-top: 2%" >
+            <h6 class="w3-center result-text">Comparison to OpenVSLAM</h6>
+			<div class="video w3-margin" >
 			  <iframe src="https://www.youtube.com/embed/PIA-8GnpkOY" allowfullscreen title="YouTube Video"></iframe>
 			</div>
-			<div class="video" style="margin-top: 1%" >
-			  <iframe src="https://www.youtube.com/embed/9hbakQUFuno" allowfullscreen title="YouTube Video"></iframe>
-			</div>
-			<div class="video" style="margin-top: 1%" >
-			  <iframe src="https://www.youtube.com/embed/HHiQuPP5rXg" allowfullscreen title="YouTube Video"></iframe>
-			</div>
-			<div class="video" style="margin-top: 1%" >
-			  <iframe src="https://www.youtube.com/embed/rUTvhaH9wTk" allowfullscreen title="YouTube Video"></iframe>
-			</div>
-			<div class="video" style="margin-top: 1%" >
-			  <iframe src="https://www.youtube.com/embed/SSr3pAKEFJM" allowfullscreen title="YouTube Video"></iframe>
-			</div>
-			<div class="video" style="margin-top: 1%" >
-			  <iframe src="https://www.youtube.com/embed/NZjDQFaaqzs" allowfullscreen title="YouTube Video"></iframe>
-			</div>
-		</div>
-				
-			
-	<div class="w3-container w3-padding-large" style="margin-top:10px; margin-left:2%;">
-		<h3 id="citation">Citation</h3>
-		<pre style="margin:0; background: #e8e8e7"><code><span>@inproceedings</span>{hhuang2022VO,
-		title = {360VO: Visual Odometry Using A Single 360 Camera},
-		author = {Huang, Huajian and Yeung, Sai-Kit},
-	    	booktitle = {International Conference on Robotics and Automation (ICRA)},
-	    	year = {2022},
-	    	organization={IEEE}
-		}</code></pre> 
+<!--			<div class="video" style="margin-top: 1%" >-->
+<!--			  <iframe src="https://www.youtube.com/embed/9hbakQUFuno" allowfullscreen title="YouTube Video"></iframe>-->
+<!--			</div>-->
+<!--			<div class="video" style="margin-top: 1%" >-->
+<!--			  <iframe src="https://www.youtube.com/embed/HHiQuPP5rXg" allowfullscreen title="YouTube Video"></iframe>-->
+<!--			</div>-->
+<!--			<div class="video" style="margin-top: 1%" >-->
+<!--			  <iframe src="https://www.youtube.com/embed/rUTvhaH9wTk" allowfullscreen title="YouTube Video"></iframe>-->
+<!--			</div>-->
+<!--			<div class="video" style="margin-top: 1%" >-->
+<!--			  <iframe src="https://www.youtube.com/embed/SSr3pAKEFJM" allowfullscreen title="YouTube Video"></iframe>-->
+<!--			</div>-->
+<!--			<div class="video" style="margin-top: 1%" >-->
+<!--			  <iframe src="https://www.youtube.com/embed/NZjDQFaaqzs" allowfullscreen title="YouTube Video"></iframe>-->
+<!--			</div>-->
 
-		<p style="margin-top:10px"><b style="font-size: 20px;">Acknowledgements</b><br>
-		This research project is partially supported by an internal grant from HKUST (R9429) and the Innovation and Technology Support Programme of the Innovation and Technology Fund (Ref: ITS/200/20FP).</p>
-	</div>
-	
+            <h6 class="w3-center result-text">More Results</h6>
+            <div id="results-demo" class="results-carousel">
+                <ul class="slides">
+                    <input type="radio" id="demo-res0" checked name="demo-group" onclick="_change_active_dot(0)" />
+                    <li class="slide-container">
+                        <div class="slide-image video">
+                            <iframe src="https://www.youtube.com/embed/9hbakQUFuno" allowfullscreen title="Seq6"></iframe>
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="demo-res4" class="prev-slide">
+                                <span><i class="fa-solid fa-circle-chevron-left"></i></span>
+                            </label>
+                            <label for="demo-res1" class="next-slide">
+                                <span><i class="fa-solid fa-circle-chevron-right"></i></span>
+                            </label>
+                        </div>
+                    </li>
+
+                    <input type="radio" id="demo-res1" name="demo-group"  onclick="_change_active_dot(1)"/>
+                    <li class="slide-container">
+                        <div class="slide-image video ">
+                            <iframe src="https://www.youtube.com/embed/HHiQuPP5rXg" allowfullscreen title="Seq8"></iframe>
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="demo-res0" class="prev-slide">
+                                <span><i class="fa-solid fa-circle-chevron-left"></i></span>
+                            </label>
+                            <label for="demo-res2" class="next-slide">
+                                <span><i class="fa-solid fa-circle-chevron-right"></i></span>
+                            </label>
+                        </div>
+                    </li>
+
+
+                    <input type="radio" id="demo-res2" name="demo-group" onclick="_change_active_dot(2)"/>
+                    <li class="slide-container">
+                        <div class="slide-image video ">
+                            <iframe src="https://www.youtube.com/embed/rUTvhaH9wTk" allowfullscreen title="Outdoor1"></iframe>
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="demo-res1" class="prev-slide">
+                                <span><i class="fa-solid fa-circle-chevron-left"></i></span>
+                            </label>
+                            <label for="demo-res3" class="next-slide">
+                                <span><i class="fa-solid fa-circle-chevron-right"></i></span>
+                            </label>
+                        </div>
+                    </li>
+
+                    <input type="radio" id="demo-res3" name="demo-group" onclick="_change_active_dot(3)"/>
+                    <li class="slide-container">
+                        <div class="slide-image video ">
+                            <iframe src="https://www.youtube.com/embed/SSr3pAKEFJM" allowfullscreen title="Indoor1"></iframe>
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="demo-res2" class="prev-slide">
+                                <span><i class="fa-solid fa-circle-chevron-left"></i></span>
+                            </label>
+                            <label for="demo-res4" class="next-slide">
+                                <span><i class="fa-solid fa-circle-chevron-right"></i></span>
+                            </label>
+                        </div>
+                    </li>
+
+                    <input type="radio" id="demo-res4" name="demo-group" onclick="_change_active_dot(4)"/>
+                    <li class="slide-container">
+                        <div class="slide-image video">
+                            <iframe src="https://www.youtube.com/embed/NZjDQFaaqzs" allowfullscreen title="Indoor2"></iframe>
+                        </div>
+                        <div class="carousel-controls">
+                            <label for="demo-res3" class="prev-slide">
+                                <span><i class="fa-solid fa-circle-chevron-left"></i></span>
+                            </label>
+                            <label for="demo-res0" class="next-slide">
+                                <span><i class="fa-solid fa-circle-chevron-right"></i></span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+                <div class="carousel-btns">
+                    <label for="demo-res0" class="carousel-btn active" id="demo-btn-0">
+                        <i class="fa-solid fa-flask-vial"></i><br>Seq6</label>
+                    <label for="demo-res1" class="carousel-btn" id="demo-btn-1">
+                        <i class="fa-solid fa-flask-vial"></i><br>Seq8</label>
+                    <label for="demo-res2" class="carousel-btn" id="demo-btn-2">
+						<i class="fa-solid fa-campground"></i> <br> Outdoor1</label>
+                    <label for="demo-res3" class="carousel-btn" id="demo-btn-3">
+						<i class="fa-solid fa-house"></i><br> Indoor1</label>
+                    <label for="demo-res4" class="carousel-btn" id="demo-btn-4">
+                        <i class="fa-solid fa-house"></i><br>Indoor2</label>
+                </div>
+
+            </div>
+
+        </div>
+
+
+		<div class="w3-container hj-padding"  id="citation">
+		<h3>Citation</h3>
+		<pre class="citation-code"><code><span>@inproceedings</span>{hhuang2022VO,
+    title = {360VO: Visual Odometry Using A Single 360 Camera},
+    author = {Huang, Huajian and Yeung, Sai-Kit},
+    booktitle = {International Conference on Robotics and Automation (ICRA)},
+    year = {2022},
+    organization={IEEE}
+}</code></pre>
+		</div>
+
+		<div class="w3-container hj-padding"  id="acknowledgements">
+			<h3>Acknowledgements</h3>
+			<p>
+				This research project is partially supported by an internal grant from HKUST (R9429) and the Innovation and Technology Support Programme of the Innovation and Technology Fund (Ref: ITS/200/20FP).
+			</p>
+		</div>
+
 
 	</div>
 </body>
