@@ -456,7 +456,7 @@ a.sidebar-nav-item:focus {
         align-items: center;
         width: 32% !important;
     }
-    .member-item .img-resize img {
+    .member-item img {
         max-width: 100px;
     }
 }
