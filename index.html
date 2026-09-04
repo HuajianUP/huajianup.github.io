@@ -28,51 +28,7 @@ if (!doNotTrack) {
 
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse hj-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container center">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove w3-large"></i>
-    </a>
-    <img src="thumbnails/profile.jpg" style="width:55%;" class="w3-round"><br><br>
-    <h4><b>Huajian Huang <span lang="cn">(黄华健)</span></b></h4>
-    <!--<p class="w3-text-grey">Template by W3.CSS</p>-->
-  </div>
-  <div class="w3-container left-float" >
-    <p><i class="fa fa-briefcase w3-margin-right"></i>Tenure-Track Professor, BIT</p>
-    <!-- <p><i class="fa fa-briefcase w3-margin-right"></i>PhD, HKUST</p> -->
-    <!--<p><i class="fa fa-map-marker w3-margin-right"></i>Hong Kong, China</p> -->
-    <p><i class="fa fa-envelope w3-margin-right" style="display:inline;"></i>huajian@bit.edu.cn<br/>
-      <span class="w3-margin-xleft">huajian.huang99@gmail.com</span>
-    </p>
-
-    <div class=" tooltip-container">
-      <a class= "tooltip w3-padding-small tooltiplogo-hover" href="https://scholar.google.com/citations?user=rOhG9NoAAAAJ&hl=en" target="_blank">
-        <img style="width:34px; height:34px" class="w3-hover-opacity" src="assets/icons8-google-scholar.svg">
-        <span class="tooltiptext" >Scholar</span>
-      </a>
-      <a class= "tooltip w3-padding-small tooltiplogo-hover" href="https://github.com/HuajianUP" target="_blank">
-        <i style="width:34px; height:34px" class="fa fa-github w3-xxlarge w3-hover-opacity "></i>
-        <span class="tooltiptext">Github</span>
-      </a>
-      <!-- <a class= "tooltip w3-padding-small tooltiplogo-hover" href="assets/CV-Huajian-latest.pdf">
-        <img style="width:34px; height:34px" class="w3-hover-opacity tooltiplogo-hover" src="assets/cv.svg">
-        <span class="tooltiptext">CV</span>
-      </a> -->
-<!--      <a class= "tooltip w3-padding-small" href="#NEW">-->
-<!--        <img style="width:34px" src="assets/NEW.svg">-->
-<!--        <span class="tooltiptext">NEW</span>-->
-<!--      </a>-->
-    </div>
-    <hr>
-  </div>
-
-  <div class="w3-container w3-bar-block hj-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="font-weight:bold"><br>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
-  <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button">PUBULICATION</a>
-  <a href="course.html" class="w3-bar-item w3-button">COURSE</a>
-</div>
-
-
+<nav class="w3-sidebar w3-collapse hj-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
 
 </nav>
 
@@ -529,6 +485,14 @@ if (!doNotTrack) {
 </div>
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("sidebar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("mySidebar").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading sidebar:", error));
+});
 // Script to open and close sidebar
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
