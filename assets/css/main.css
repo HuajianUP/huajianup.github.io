@@ -457,16 +457,16 @@ a.sidebar-nav-item:focus {
         width: 32% !important;
     }
     .member-item .img-resize img {
-        max-width: 200px;
+        max-width: 100px;
     }
 }
 
-/* @media (min-width: 96em) {
+@media (min-width: 96em) {
 
     .member-item{
-        width: 25% !important;
+        width: 20% !important;
     }
-} */
+}
 @media (min-width: 64em) {
     .content {
         margin-left: 18rem;
