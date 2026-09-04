@@ -476,7 +476,7 @@ a.sidebar-nav-item:focus {
 /* When in small width size < 48em*/
 .paper-container{
     display: flex !important;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 .paper-container>*{
@@ -829,4 +829,26 @@ details > *:not(summary) {
 
 details[open] > *:not(summary){
     color: inherit;
+}
+
+
+/*Susan course webpage*/
+.bg-overlay:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.1;
+}
+.bg-overlay {
+    position: relative;
+}
+.bg-cover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
