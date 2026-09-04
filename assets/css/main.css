@@ -454,7 +454,7 @@ a.sidebar-nav-item:focus {
         display: flex !important;
         flex-direction: column;
         align-items: center;
-        width: 32% !important;
+        width: 25% !important;
     }
     .member-item img {
         max-width: 100px;
@@ -526,10 +526,11 @@ a.sidebar-nav-item:focus {
 .member-item .name{
     line-height: 1.6;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 .member-item .info{
-    line-height: 1.6;
+    line-height: 1.1;
+    font-size: 14px;
 }
 
 .is-disabled {
